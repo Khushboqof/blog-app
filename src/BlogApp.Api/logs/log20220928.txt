@@ -1,0 +1,55 @@
+2022-09-28 14:37:10.034 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-28 14:37:10.073 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44380/swagger/index.html - -
+2022-09-28 14:37:10.122 +05:00 [INF] Hosting environment: Development
+2022-09-28 14:37:10.124 +05:00 [INF] Content root path: C:\Users\Elbek\source\repos\BlogApp\BlogApp.Api\
+2022-09-28 14:37:10.722 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44380/_framework/aspnetcore-browser-refresh.js - -
+2022-09-28 14:37:10.723 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44380/_vs/browserLink - -
+2022-09-28 14:37:10.762 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44380/_framework/aspnetcore-browser-refresh.js - - - 200 11992 application/javascript;+charset=utf-8 25.6296ms
+2022-09-28 14:37:10.762 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44380/swagger/index.html - - - 200 - text/html;charset=utf-8 689.6768ms
+2022-09-28 14:37:10.835 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44380/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 111.8027ms
+2022-09-28 14:37:10.960 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44380/swagger/v1/swagger.json - -
+2022-09-28 14:37:11.251 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44380/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 290.2351ms
+2022-09-28 14:39:25.227 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-28 14:39:25.296 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44380/swagger/index.html - -
+2022-09-28 14:39:25.320 +05:00 [INF] Hosting environment: Development
+2022-09-28 14:39:25.322 +05:00 [INF] Content root path: C:\Users\Elbek\source\repos\BlogApp\BlogApp.Api\
+2022-09-28 14:39:26.026 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44380/_vs/browserLink - -
+2022-09-28 14:39:26.026 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44380/_framework/aspnetcore-browser-refresh.js - -
+2022-09-28 14:39:26.070 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44380/swagger/index.html - - - 200 - text/html;charset=utf-8 780.7480ms
+2022-09-28 14:39:26.070 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44380/_framework/aspnetcore-browser-refresh.js - - - 200 11992 application/javascript;+charset=utf-8 21.5465ms
+2022-09-28 14:39:26.146 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44380/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 119.5297ms
+2022-09-28 14:39:26.221 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44380/swagger/v1/swagger.json - -
+2022-09-28 14:39:26.510 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44380/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 289.6861ms
+2022-09-28 14:58:11.308 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-28 14:58:11.376 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44380/swagger/index.html - -
+2022-09-28 14:58:11.390 +05:00 [INF] Hosting environment: Development
+2022-09-28 14:58:11.392 +05:00 [INF] Content root path: C:\Users\Elbek\source\repos\BlogApp\BlogApp.Api\
+2022-09-28 14:58:11.996 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44380/_framework/aspnetcore-browser-refresh.js - -
+2022-09-28 14:58:11.996 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44380/_vs/browserLink - -
+2022-09-28 14:58:12.022 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44380/swagger/index.html - - - 200 - text/html;charset=utf-8 652.7853ms
+2022-09-28 14:58:12.022 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44380/_framework/aspnetcore-browser-refresh.js - - - 200 11992 application/javascript;+charset=utf-8 24.0188ms
+2022-09-28 14:58:12.113 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44380/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 116.5605ms
+2022-09-28 14:58:12.215 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44380/swagger/v1/swagger.json - -
+2022-09-28 14:58:12.482 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44380/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 266.7963ms
+2022-09-28 14:58:29.145 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-28 14:58:29.173 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44380/swagger/index.html - -
+2022-09-28 14:58:29.194 +05:00 [INF] Hosting environment: Development
+2022-09-28 14:58:29.194 +05:00 [INF] Content root path: C:\Users\Elbek\source\repos\BlogApp\BlogApp.Api\
+2022-09-28 14:58:29.515 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44380/swagger/index.html - - - 200 - text/html;charset=utf-8 346.6509ms
+2022-09-28 14:58:29.518 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44380/_framework/aspnetcore-browser-refresh.js - -
+2022-09-28 14:58:29.521 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44380/_vs/browserLink - -
+2022-09-28 14:58:29.529 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44380/_framework/aspnetcore-browser-refresh.js - - - 200 11992 application/javascript;+charset=utf-8 10.4185ms
+2022-09-28 14:58:29.587 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44380/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 65.1465ms
+2022-09-28 14:58:29.731 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44380/swagger/v1/swagger.json - -
+2022-09-28 14:58:29.915 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44380/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 184.3116ms
+2022-09-28 15:05:06.348 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-28 15:05:06.522 +05:00 [INF] Hosting environment: Development
+2022-09-28 15:05:06.527 +05:00 [INF] Content root path: C:\Users\Elbek\source\repos\BlogApp\BlogApp.Api\
+2022-09-28 15:05:06.552 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44380/swagger/index.html - -
+2022-09-28 15:05:07.751 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44380/_framework/aspnetcore-browser-refresh.js - -
+2022-09-28 15:05:07.751 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44380/_vs/browserLink - -
+2022-09-28 15:05:07.780 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44380/swagger/index.html - - - 200 - text/html;charset=utf-8 1244.8145ms
+2022-09-28 15:05:07.781 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44380/_framework/aspnetcore-browser-refresh.js - - - 200 11992 application/javascript;+charset=utf-8 21.9740ms
+2022-09-28 15:05:08.019 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44380/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 267.5689ms
+2022-09-28 15:05:08.143 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44380/swagger/v1/swagger.json - -
+2022-09-28 15:05:08.546 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44380/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 403.0689ms
