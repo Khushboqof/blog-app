@@ -12,6 +12,8 @@ namespace BlogApp.Api.ViewModels.Users
 
         public string Email { get; set; } = string.Empty;
 
+        public bool IsEmailConfirmed { get; set; } = false;
+
         public string ImageUrl { get; set; } = string.Empty;
 
         public static implicit operator UserViewModel(User user)

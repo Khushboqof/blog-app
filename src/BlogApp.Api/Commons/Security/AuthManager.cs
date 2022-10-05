@@ -35,7 +35,5 @@ namespace BlogApp.Api.Commons.Security
 
             return new JwtSecurityTokenHandler().WriteToken(tokenDescription);  
         }
-
-
     }
 }

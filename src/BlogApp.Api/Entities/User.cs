@@ -1,4 +1,5 @@
 ﻿using BlogApp.Api.Enums;
+using BlogApp.Api.ViewModels.Users;
 
 namespace BlogApp.Api.Entities
 {
@@ -14,10 +15,13 @@ namespace BlogApp.Api.Entities
 
         public string PasswordHash { get; set; } = string.Empty;
 
+        public bool IsEmailConfirmed { get; set; } = false;
+
         public string ImagePath { get; set; } = string.Empty;
 
         public string Salt { get; set; } = string.Empty;
 
         public UserRole UserRole { get; set; } = UserRole.User;
+
     }
 }

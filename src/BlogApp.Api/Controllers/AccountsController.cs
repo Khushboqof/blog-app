@@ -1,4 +1,5 @@
 ﻿using BlogApp.Api.Inerfaces.Services;
+using BlogApp.Api.Services;
 using BlogApp.Api.ViewModels.Users;
 using Microsoft.AspNetCore.Mvc;
 
@@ -25,5 +26,16 @@ namespace BlogApp.Api.Controllers
         [HttpPost("login")]
         public async Task<IActionResult> LogInAsync([FromForm] UserLoginViewModel viewModel)
             => Ok( new { Token = await _accountService.LogInAsync(viewModel)});
+
+        [HttpPost("verifyemail")]
+        public async Task<IActionResult> VerifyEmail([FromBody] EmailVerify email)
+            => Ok(await _accountService.VerifyEmail(email));
+
+        [HttpPost("sendcode")]
+        public async Task<IActionResult> SendToEmail([FromBody] SendToEmail email)
+        {
+            await _accountService.SendCodeAsync(email);
+            return Ok();
+        }
     }
 }
