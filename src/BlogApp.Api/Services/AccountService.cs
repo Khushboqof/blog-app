@@ -71,8 +71,11 @@ namespace BlogApp.Api.Services
                 };
 
                 await SendCodeAsync(email);
+
+                return true;
             }
-            throw new StatusCodeException(HttpStatusCode.BadRequest, message: "user already exist!");
+            else
+                throw new StatusCodeException(HttpStatusCode.BadRequest, message: "user already exist!");
         }
 
         public async Task SendCodeAsync(SendToEmail email)

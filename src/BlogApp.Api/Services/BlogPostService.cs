@@ -35,6 +35,11 @@ namespace BlogApp.Api.Services
 
         public async Task<bool> DeleteAsync(Expression<Func<BlogPost, bool>> expression)
         {
+            var post = await _blogAppRepository.GetAsync(expression);
+
+            if (post is null)
+                throw new StatusCodeException(HttpStatusCode.NotFound, message: "No such blog post exists");
+
             await _blogAppRepository.DeleteAsync(expression);
             await _blogAppRepository.SaveAsync();
 
@@ -73,27 +78,31 @@ namespace BlogApp.Api.Services
         {
             var post = await _blogAppRepository.GetAsync(expression);
 
-            var user = await _userRepository.GetAsync(p => p.Id == post.UserId);
-
-            var blogView = new BlogViewModel()
-            {
-                Id = post.Id,
-                Title = post.Title,
-                Description = post.Description,
-                Username = ((user.FirstName + " " + user.LastName)),
-                ViewCount = post.ViewCount,
-                CreatedAt = post.CreatedAt,
-                UpdatedAt = post.UpdatedAt
-            };
-
-            post.ViewCount++;
-            await _blogAppRepository.UpdateAsync(post);
-            await _blogAppRepository.SaveAsync();
-
             if (post is null)
-                throw new StatusCodeException(HttpStatusCode.NotFound, message: "User not found");
+                throw new StatusCodeException(HttpStatusCode.NotFound, message: "Blog not found");
+            else
+            {
+                var user = await _userRepository.GetAsync(p => p.Id == post.UserId);
 
-            return blogView;
+                var blogView = new BlogViewModel()
+                {
+                    Id = post.Id,
+                    Title = post.Title,
+                    Description = post.Description,
+                    Username = ((user.FirstName + " " + user.LastName)),
+                    ViewCount = post.ViewCount,
+                    CreatedAt = post.CreatedAt,
+                    UpdatedAt = post.UpdatedAt
+                };
+
+                post.ViewCount++;
+                await _blogAppRepository.UpdateAsync(post);
+                await _blogAppRepository.SaveAsync();
+
+                return blogView;
+
+            }
+
         }
 
         public async Task<BlogPost> UpdateAsync(long id, BlogCreateViewModel viewModel)

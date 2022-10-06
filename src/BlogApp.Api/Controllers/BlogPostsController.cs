@@ -1,6 +1,7 @@
 ﻿using BlogApp.Api.Commons.Helpers;
 using BlogApp.Api.Inerfaces.Services;
 using BlogApp.Api.ViewModels.Blogs;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BlogApp.Api.Controllers
@@ -16,11 +17,11 @@ namespace BlogApp.Api.Controllers
             _blogPostService = blogPostService;
         }
 
-        [HttpPost]
+        [HttpPost, Authorize]
         public async Task<IActionResult> CreateAsync([FromForm] BlogCreateViewModel viewModel)
             => Ok(await _blogPostService.CreateAsync(viewModel));
 
-        [HttpGet("{id}")]
+        [HttpGet("{id}"), Authorize]
         public async Task<IActionResult> GetAsync(long id)
             => Ok(await _blogPostService.GetAsync(o => o.Id == id));
 

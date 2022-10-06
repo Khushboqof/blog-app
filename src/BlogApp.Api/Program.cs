@@ -1,6 +1,7 @@
 using BlogApp.Api.Commons.Helpers;
 using BlogApp.Api.Commons.Middlewares;
 using BlogApp.Api.Commons.Security;
+using BlogApp.Api.Configurations;
 using BlogApp.Api.Data;
 using BlogApp.Api.Inerfaces.Managers;
 using BlogApp.Api.Inerfaces.Repositories;
@@ -15,6 +16,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.ConfigureJwt(builder.Configuration);
+builder.Services.ConfigureSwaggerAuthorize();
 
 //Database
 var connectionString = builder.Configuration.GetConnectionString("PostgresManagement");
@@ -39,14 +42,16 @@ builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 //Serilog
 builder.Host.UseSerilog((hostingContext, loggerConfiguration) =>
     loggerConfiguration.ReadFrom.Configuration(hostingContext.Configuration));
+builder.Services.AddMemoryCache();
 
 var app = builder.Build();
-// Configure the HTTP request pipeline.
+
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
 
 HttpContextHelper.Accessor = app.Services.GetRequiredService<IHttpContextAccessor>();
 
@@ -54,9 +59,9 @@ app.UseMiddleware<ExceptionHandlerMiddlewar>();
 
 app.UseHttpsRedirection();
 
-app.UseAuthorization();
-
 app.UseAuthentication();
+
+app.UseAuthorization();
 
 app.MapControllers();
 
