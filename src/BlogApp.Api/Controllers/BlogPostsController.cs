@@ -21,15 +21,15 @@ namespace BlogApp.Api.Controllers
         public async Task<IActionResult> CreateAsync([FromForm] BlogCreateViewModel viewModel)
             => Ok(await _blogPostService.CreateAsync(viewModel));
 
-        [HttpGet("{id}"), Authorize]
+        [HttpGet("{id}")]
         public async Task<IActionResult> GetAsync(long id)
             => Ok(await _blogPostService.GetAsync(o => o.Id == id));
 
-        [HttpDelete("{id}")]
+        [HttpDelete("{id}"), Authorize]
         public async Task<IActionResult> DeleteAsync(long id)
             => Ok(await _blogPostService.DeleteAsync(o => o.Id == id));
 
-        [HttpPut("{id}")]
+        [HttpPut("{id}"), Authorize]
         public async Task<IActionResult> UpdateAsync(long id, [FromForm] BlogCreateViewModel viewModel)
             => Ok(await _blogPostService.UpdateAsync(id, viewModel));
 

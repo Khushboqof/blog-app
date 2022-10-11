@@ -12,5 +12,6 @@ namespace BlogApp.Api.Inerfaces.Services
         Task<BlogViewModel> GetAsync(Expression<Func<BlogPost, bool>> expression);
         Task<IEnumerable<BlogViewModel>> GetAllAsync(PaginationParams @params, Expression<Func<BlogPost, bool>>? expression = null);
         Task<bool> DeleteAsync(Expression<Func<BlogPost, bool>> expression);
+
     }
 }

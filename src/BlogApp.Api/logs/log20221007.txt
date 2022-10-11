@@ -1,0 +1,397 @@
+2022-10-07 15:19:19.105 +05:00 [INF] User profile is available. Using 'C:\Users\Elbek\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-10-07 15:19:19.815 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-10-07 15:19:19.815 +05:00 [INF] Hosting environment: Development
+2022-10-07 15:19:19.815 +05:00 [INF] Content root path: C:\Users\Elbek\Desktop\blog-app\src\BlogApp.Api\
+2022-10-07 15:19:20.002 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44380/swagger/index.html - -
+2022-10-07 15:19:21.099 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44380/_framework/aspnetcore-browser-refresh.js - -
+2022-10-07 15:19:21.099 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44380/_vs/browserLink - -
+2022-10-07 15:19:21.130 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44380/swagger/index.html - - - 200 - text/html;charset=utf-8 1123.9565ms
+2022-10-07 15:19:21.130 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44380/_framework/aspnetcore-browser-refresh.js - - - 200 11992 application/javascript;+charset=utf-8 27.3103ms
+2022-10-07 15:19:21.212 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44380/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 112.9332ms
+2022-10-07 15:19:21.310 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44380/swagger/v1/swagger.json - -
+2022-10-07 15:19:21.631 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44380/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 320.7207ms
+2022-10-07 15:21:00.214 +05:00 [INF] Request starting HTTP/2 POST https://localhost:44380/api/accounts/registr multipart/form-data;+boundary=----WebKitFormBoundarypsLl34B1rMCZvSGK 105851
+2022-10-07 15:21:01.454 +05:00 [INF] Executing endpoint 'BlogApp.Api.Controllers.AccountsController.RegistrAsync (BlogApp.Api)'
+2022-10-07 15:21:01.540 +05:00 [INF] Route matched with {action = "Registr", controller = "Accounts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RegistrAsync(BlogApp.Api.ViewModels.Users.UserCreateViewModel) on controller BlogApp.Api.Controllers.AccountsController (BlogApp.Api).
+2022-10-07 15:21:05.210 +05:00 [INF] Entity Framework Core 6.0.9 initialized 'AppDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.7+5b98e4b74de93b590b44aef8dd7967c03acc433c' with options: None
+2022-10-07 15:21:05.402 +05:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2022-10-07 15:21:05.425 +05:00 [INF] Executed action BlogApp.Api.Controllers.AccountsController.RegistrAsync (BlogApp.Api) in 3873.442ms
+2022-10-07 15:21:05.432 +05:00 [INF] Executed endpoint 'BlogApp.Api.Controllers.AccountsController.RegistrAsync (BlogApp.Api)'
+2022-10-07 15:21:05.478 +05:00 [INF] Request finished HTTP/2 POST https://localhost:44380/api/accounts/registr multipart/form-data;+boundary=----WebKitFormBoundarypsLl34B1rMCZvSGK 105851 - 400 - application/problem+json;+charset=utf-8 5264.8073ms
+2022-10-07 15:21:17.351 +05:00 [INF] Request starting HTTP/2 POST https://localhost:44380/api/accounts/registr multipart/form-data;+boundary=----WebKitFormBoundary39ABFd8McK5Cgfw6 105851
+2022-10-07 15:21:17.355 +05:00 [INF] Executing endpoint 'BlogApp.Api.Controllers.AccountsController.RegistrAsync (BlogApp.Api)'
+2022-10-07 15:21:17.356 +05:00 [INF] Route matched with {action = "Registr", controller = "Accounts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RegistrAsync(BlogApp.Api.ViewModels.Users.UserCreateViewModel) on controller BlogApp.Api.Controllers.AccountsController (BlogApp.Api).
+2022-10-07 15:21:17.446 +05:00 [INF] Entity Framework Core 6.0.9 initialized 'AppDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.7+5b98e4b74de93b590b44aef8dd7967c03acc433c' with options: None
+2022-10-07 15:21:19.982 +05:00 [INF] Executed DbCommand (205ms) [Parameters=[@__viewModel_Email_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."Email", u."FirstName", u."ImagePath", u."IsEmailConfirmed", u."LastName", u."PasswordHash", u."Salt", u."UserRole"
+FROM "Users" AS u
+WHERE u."Email" = @__viewModel_Email_0
+LIMIT 1
+2022-10-07 15:21:21.174 +05:00 [INF] Executed DbCommand (45ms) [Parameters=[@p0='?', @p1='?', @p2='?', @p3='?' (DbType = Boolean), @p4='?', @p5='?', @p6='?', @p7='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Users" ("Email", "FirstName", "ImagePath", "IsEmailConfirmed", "LastName", "PasswordHash", "Salt", "UserRole")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7)
+RETURNING "Id";
+2022-10-07 15:21:24.878 +05:00 [INF] Executing OkObjectResult, writing value of type 'System.Boolean'.
+2022-10-07 15:21:24.879 +05:00 [INF] Executed action BlogApp.Api.Controllers.AccountsController.RegistrAsync (BlogApp.Api) in 7522.8762ms
+2022-10-07 15:21:24.879 +05:00 [INF] Executed endpoint 'BlogApp.Api.Controllers.AccountsController.RegistrAsync (BlogApp.Api)'
+2022-10-07 15:21:24.884 +05:00 [INF] Request finished HTTP/2 POST https://localhost:44380/api/accounts/registr multipart/form-data;+boundary=----WebKitFormBoundary39ABFd8McK5Cgfw6 105851 - 200 - application/json;+charset=utf-8 7533.3605ms
+2022-10-07 15:33:42.535 +05:00 [INF] Request starting HTTP/2 POST https://localhost:44380/api/accounts/login multipart/form-data;+boundary=----WebKitFormBoundarypR8VVnv8wptpUzpp 259
+2022-10-07 15:33:42.595 +05:00 [INF] Executing endpoint 'BlogApp.Api.Controllers.AccountsController.LogInAsync (BlogApp.Api)'
+2022-10-07 15:33:42.674 +05:00 [INF] Route matched with {action = "LogIn", controller = "Accounts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LogInAsync(BlogApp.Api.ViewModels.Users.UserLoginViewModel) on controller BlogApp.Api.Controllers.AccountsController (BlogApp.Api).
+2022-10-07 15:33:42.803 +05:00 [INF] Entity Framework Core 6.0.9 initialized 'AppDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.7+5b98e4b74de93b590b44aef8dd7967c03acc433c' with options: None
+2022-10-07 15:33:43.007 +05:00 [INF] Executed DbCommand (10ms) [Parameters=[@__viewModel_Email_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."Email", u."FirstName", u."ImagePath", u."IsEmailConfirmed", u."LastName", u."PasswordHash", u."Salt", u."UserRole"
+FROM "Users" AS u
+WHERE u."Email" = @__viewModel_Email_0
+LIMIT 1
+2022-10-07 15:33:43.922 +05:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2022-10-07 15:33:43.944 +05:00 [INF] Executed action BlogApp.Api.Controllers.AccountsController.LogInAsync (BlogApp.Api) in 1270.4413ms
+2022-10-07 15:33:43.944 +05:00 [INF] Executed endpoint 'BlogApp.Api.Controllers.AccountsController.LogInAsync (BlogApp.Api)'
+2022-10-07 15:33:43.946 +05:00 [INF] Request finished HTTP/2 POST https://localhost:44380/api/accounts/login multipart/form-data;+boundary=----WebKitFormBoundarypR8VVnv8wptpUzpp 259 - 200 - application/json;+charset=utf-8 1417.1252ms
+2022-10-07 15:41:55.090 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44380/api/blogposts?PageIndex=1&PageSize=2 - -
+2022-10-07 15:41:55.351 +05:00 [INF] Executing endpoint 'BlogApp.Api.Controllers.BlogPostsController.GetAllAsync (BlogApp.Api)'
+2022-10-07 15:41:55.360 +05:00 [INF] Route matched with {action = "GetAll", controller = "BlogPosts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllAsync(BlogApp.Api.Commons.Helpers.PaginationParams) on controller BlogApp.Api.Controllers.BlogPostsController (BlogApp.Api).
+2022-10-07 15:41:55.366 +05:00 [INF] Entity Framework Core 6.0.9 initialized 'AppDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.7+5b98e4b74de93b590b44aef8dd7967c03acc433c' with options: None
+2022-10-07 15:41:55.780 +05:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)::INT
+FROM "BlogPosts" AS b
+2022-10-07 15:41:55.830 +05:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2022-10-07 15:41:55.832 +05:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2022-10-07 15:41:55.857 +05:00 [INF] Executed DbCommand (5ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT b."Id", b."CreatedAt", b."Description", b."Title", b."UpdatedAt", b."UserId", b."ViewCount"
+FROM "BlogPosts" AS b
+LIMIT @__p_1 OFFSET @__p_0
+2022-10-07 15:41:55.958 +05:00 [INF] Executed DbCommand (25ms) [Parameters=[@__post_UserId_0='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."Email", u."FirstName", u."ImagePath", u."IsEmailConfirmed", u."LastName", u."PasswordHash", u."Salt", u."UserRole"
+FROM "Users" AS u
+WHERE u."Id" = @__post_UserId_0
+LIMIT 1
+2022-10-07 15:41:55.994 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__post_UserId_0='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."Email", u."FirstName", u."ImagePath", u."IsEmailConfirmed", u."LastName", u."PasswordHash", u."Salt", u."UserRole"
+FROM "Users" AS u
+WHERE u."Id" = @__post_UserId_0
+LIMIT 1
+2022-10-07 15:41:55.996 +05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BlogApp.Api.ViewModels.Blogs.BlogViewModel, BlogApp.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-10-07 15:41:56.031 +05:00 [INF] Executed action BlogApp.Api.Controllers.BlogPostsController.GetAllAsync (BlogApp.Api) in 671.0812ms
+2022-10-07 15:41:56.031 +05:00 [INF] Executed endpoint 'BlogApp.Api.Controllers.BlogPostsController.GetAllAsync (BlogApp.Api)'
+2022-10-07 15:41:56.032 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44380/api/blogposts?PageIndex=1&PageSize=2 - - - 200 - application/json;+charset=utf-8 977.2008ms
+2022-10-07 15:42:17.763 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44380/api/blogposts - -
+2022-10-07 15:42:17.765 +05:00 [INF] Executing endpoint 'BlogApp.Api.Controllers.BlogPostsController.GetAllAsync (BlogApp.Api)'
+2022-10-07 15:42:17.766 +05:00 [INF] Route matched with {action = "GetAll", controller = "BlogPosts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllAsync(BlogApp.Api.Commons.Helpers.PaginationParams) on controller BlogApp.Api.Controllers.BlogPostsController (BlogApp.Api).
+2022-10-07 15:42:17.767 +05:00 [INF] Entity Framework Core 6.0.9 initialized 'AppDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.7+5b98e4b74de93b590b44aef8dd7967c03acc433c' with options: None
+2022-10-07 15:42:17.771 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)::INT
+FROM "BlogPosts" AS b
+2022-10-07 15:42:17.778 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT b."Id", b."CreatedAt", b."Description", b."Title", b."UpdatedAt", b."UserId", b."ViewCount"
+FROM "BlogPosts" AS b
+2022-10-07 15:42:17.785 +05:00 [INF] Executed DbCommand (6ms) [Parameters=[@__post_UserId_0='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."Email", u."FirstName", u."ImagePath", u."IsEmailConfirmed", u."LastName", u."PasswordHash", u."Salt", u."UserRole"
+FROM "Users" AS u
+WHERE u."Id" = @__post_UserId_0
+LIMIT 1
+2022-10-07 15:42:17.804 +05:00 [INF] Executed DbCommand (8ms) [Parameters=[@__post_UserId_0='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."Email", u."FirstName", u."ImagePath", u."IsEmailConfirmed", u."LastName", u."PasswordHash", u."Salt", u."UserRole"
+FROM "Users" AS u
+WHERE u."Id" = @__post_UserId_0
+LIMIT 1
+2022-10-07 15:42:17.813 +05:00 [INF] Executed DbCommand (4ms) [Parameters=[@__post_UserId_0='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."Email", u."FirstName", u."ImagePath", u."IsEmailConfirmed", u."LastName", u."PasswordHash", u."Salt", u."UserRole"
+FROM "Users" AS u
+WHERE u."Id" = @__post_UserId_0
+LIMIT 1
+2022-10-07 15:42:17.818 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__post_UserId_0='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."Email", u."FirstName", u."ImagePath", u."IsEmailConfirmed", u."LastName", u."PasswordHash", u."Salt", u."UserRole"
+FROM "Users" AS u
+WHERE u."Id" = @__post_UserId_0
+LIMIT 1
+2022-10-07 15:42:17.822 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__post_UserId_0='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."Email", u."FirstName", u."ImagePath", u."IsEmailConfirmed", u."LastName", u."PasswordHash", u."Salt", u."UserRole"
+FROM "Users" AS u
+WHERE u."Id" = @__post_UserId_0
+LIMIT 1
+2022-10-07 15:42:17.826 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__post_UserId_0='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."Email", u."FirstName", u."ImagePath", u."IsEmailConfirmed", u."LastName", u."PasswordHash", u."Salt", u."UserRole"
+FROM "Users" AS u
+WHERE u."Id" = @__post_UserId_0
+LIMIT 1
+2022-10-07 15:42:17.832 +05:00 [INF] Executed DbCommand (4ms) [Parameters=[@__post_UserId_0='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."Email", u."FirstName", u."ImagePath", u."IsEmailConfirmed", u."LastName", u."PasswordHash", u."Salt", u."UserRole"
+FROM "Users" AS u
+WHERE u."Id" = @__post_UserId_0
+LIMIT 1
+2022-10-07 15:42:17.836 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__post_UserId_0='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."Email", u."FirstName", u."ImagePath", u."IsEmailConfirmed", u."LastName", u."PasswordHash", u."Salt", u."UserRole"
+FROM "Users" AS u
+WHERE u."Id" = @__post_UserId_0
+LIMIT 1
+2022-10-07 15:42:17.841 +05:00 [INF] Executed DbCommand (3ms) [Parameters=[@__post_UserId_0='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."Email", u."FirstName", u."ImagePath", u."IsEmailConfirmed", u."LastName", u."PasswordHash", u."Salt", u."UserRole"
+FROM "Users" AS u
+WHERE u."Id" = @__post_UserId_0
+LIMIT 1
+2022-10-07 15:42:17.845 +05:00 [INF] Executed DbCommand (3ms) [Parameters=[@__post_UserId_0='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."Email", u."FirstName", u."ImagePath", u."IsEmailConfirmed", u."LastName", u."PasswordHash", u."Salt", u."UserRole"
+FROM "Users" AS u
+WHERE u."Id" = @__post_UserId_0
+LIMIT 1
+2022-10-07 15:42:17.846 +05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BlogApp.Api.ViewModels.Blogs.BlogViewModel, BlogApp.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-10-07 15:42:17.847 +05:00 [INF] Executed action BlogApp.Api.Controllers.BlogPostsController.GetAllAsync (BlogApp.Api) in 81.2627ms
+2022-10-07 15:42:17.847 +05:00 [INF] Executed endpoint 'BlogApp.Api.Controllers.BlogPostsController.GetAllAsync (BlogApp.Api)'
+2022-10-07 15:42:17.848 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44380/api/blogposts - - - 200 - application/json;+charset=utf-8 85.1408ms
+2022-10-07 16:32:05.808 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44380/api/blogposts - -
+2022-10-07 16:32:05.824 +05:00 [INF] Executing endpoint 'BlogApp.Api.Controllers.BlogPostsController.GetAllAsync (BlogApp.Api)'
+2022-10-07 16:32:05.826 +05:00 [INF] Route matched with {action = "GetAll", controller = "BlogPosts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllAsync(BlogApp.Api.Commons.Helpers.PaginationParams) on controller BlogApp.Api.Controllers.BlogPostsController (BlogApp.Api).
+2022-10-07 16:32:05.910 +05:00 [INF] Entity Framework Core 6.0.9 initialized 'AppDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.7+5b98e4b74de93b590b44aef8dd7967c03acc433c' with options: None
+2022-10-07 16:32:05.976 +05:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)::INT
+FROM "BlogPosts" AS b
+2022-10-07 16:32:05.982 +05:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT b."Id", b."CreatedAt", b."Description", b."Title", b."UpdatedAt", b."UserId", b."ViewCount"
+FROM "BlogPosts" AS b
+2022-10-07 16:32:05.992 +05:00 [INF] Executed DbCommand (7ms) [Parameters=[@__post_UserId_0='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."Email", u."FirstName", u."ImagePath", u."IsEmailConfirmed", u."LastName", u."PasswordHash", u."Salt", u."UserRole"
+FROM "Users" AS u
+WHERE u."Id" = @__post_UserId_0
+LIMIT 1
+2022-10-07 16:32:05.996 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__post_UserId_0='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."Email", u."FirstName", u."ImagePath", u."IsEmailConfirmed", u."LastName", u."PasswordHash", u."Salt", u."UserRole"
+FROM "Users" AS u
+WHERE u."Id" = @__post_UserId_0
+LIMIT 1
+2022-10-07 16:32:05.998 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__post_UserId_0='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."Email", u."FirstName", u."ImagePath", u."IsEmailConfirmed", u."LastName", u."PasswordHash", u."Salt", u."UserRole"
+FROM "Users" AS u
+WHERE u."Id" = @__post_UserId_0
+LIMIT 1
+2022-10-07 16:32:06.002 +05:00 [INF] Executed DbCommand (3ms) [Parameters=[@__post_UserId_0='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."Email", u."FirstName", u."ImagePath", u."IsEmailConfirmed", u."LastName", u."PasswordHash", u."Salt", u."UserRole"
+FROM "Users" AS u
+WHERE u."Id" = @__post_UserId_0
+LIMIT 1
+2022-10-07 16:32:06.016 +05:00 [INF] Executed DbCommand (10ms) [Parameters=[@__post_UserId_0='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."Email", u."FirstName", u."ImagePath", u."IsEmailConfirmed", u."LastName", u."PasswordHash", u."Salt", u."UserRole"
+FROM "Users" AS u
+WHERE u."Id" = @__post_UserId_0
+LIMIT 1
+2022-10-07 16:32:06.020 +05:00 [INF] Executed DbCommand (3ms) [Parameters=[@__post_UserId_0='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."Email", u."FirstName", u."ImagePath", u."IsEmailConfirmed", u."LastName", u."PasswordHash", u."Salt", u."UserRole"
+FROM "Users" AS u
+WHERE u."Id" = @__post_UserId_0
+LIMIT 1
+2022-10-07 16:32:06.022 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__post_UserId_0='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."Email", u."FirstName", u."ImagePath", u."IsEmailConfirmed", u."LastName", u."PasswordHash", u."Salt", u."UserRole"
+FROM "Users" AS u
+WHERE u."Id" = @__post_UserId_0
+LIMIT 1
+2022-10-07 16:32:06.024 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__post_UserId_0='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."Email", u."FirstName", u."ImagePath", u."IsEmailConfirmed", u."LastName", u."PasswordHash", u."Salt", u."UserRole"
+FROM "Users" AS u
+WHERE u."Id" = @__post_UserId_0
+LIMIT 1
+2022-10-07 16:32:06.026 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__post_UserId_0='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."Email", u."FirstName", u."ImagePath", u."IsEmailConfirmed", u."LastName", u."PasswordHash", u."Salt", u."UserRole"
+FROM "Users" AS u
+WHERE u."Id" = @__post_UserId_0
+LIMIT 1
+2022-10-07 16:32:06.028 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__post_UserId_0='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."Email", u."FirstName", u."ImagePath", u."IsEmailConfirmed", u."LastName", u."PasswordHash", u."Salt", u."UserRole"
+FROM "Users" AS u
+WHERE u."Id" = @__post_UserId_0
+LIMIT 1
+2022-10-07 16:32:06.029 +05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BlogApp.Api.ViewModels.Blogs.BlogViewModel, BlogApp.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-10-07 16:32:06.031 +05:00 [INF] Executed action BlogApp.Api.Controllers.BlogPostsController.GetAllAsync (BlogApp.Api) in 205.1453ms
+2022-10-07 16:32:06.031 +05:00 [INF] Executed endpoint 'BlogApp.Api.Controllers.BlogPostsController.GetAllAsync (BlogApp.Api)'
+2022-10-07 16:32:06.032 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44380/api/blogposts - - - 200 - application/json;+charset=utf-8 228.3669ms
+2022-10-07 16:32:08.398 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44380/api/blogposts - -
+2022-10-07 16:32:08.398 +05:00 [INF] Executing endpoint 'BlogApp.Api.Controllers.BlogPostsController.GetAllAsync (BlogApp.Api)'
+2022-10-07 16:32:08.398 +05:00 [INF] Route matched with {action = "GetAll", controller = "BlogPosts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllAsync(BlogApp.Api.Commons.Helpers.PaginationParams) on controller BlogApp.Api.Controllers.BlogPostsController (BlogApp.Api).
+2022-10-07 16:32:08.399 +05:00 [INF] Entity Framework Core 6.0.9 initialized 'AppDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.7+5b98e4b74de93b590b44aef8dd7967c03acc433c' with options: None
+2022-10-07 16:32:08.400 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)::INT
+FROM "BlogPosts" AS b
+2022-10-07 16:32:08.401 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT b."Id", b."CreatedAt", b."Description", b."Title", b."UpdatedAt", b."UserId", b."ViewCount"
+FROM "BlogPosts" AS b
+2022-10-07 16:32:08.407 +05:00 [INF] Executed DbCommand (5ms) [Parameters=[@__post_UserId_0='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."Email", u."FirstName", u."ImagePath", u."IsEmailConfirmed", u."LastName", u."PasswordHash", u."Salt", u."UserRole"
+FROM "Users" AS u
+WHERE u."Id" = @__post_UserId_0
+LIMIT 1
+2022-10-07 16:32:08.410 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__post_UserId_0='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."Email", u."FirstName", u."ImagePath", u."IsEmailConfirmed", u."LastName", u."PasswordHash", u."Salt", u."UserRole"
+FROM "Users" AS u
+WHERE u."Id" = @__post_UserId_0
+LIMIT 1
+2022-10-07 16:32:08.413 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__post_UserId_0='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."Email", u."FirstName", u."ImagePath", u."IsEmailConfirmed", u."LastName", u."PasswordHash", u."Salt", u."UserRole"
+FROM "Users" AS u
+WHERE u."Id" = @__post_UserId_0
+LIMIT 1
+2022-10-07 16:32:08.416 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__post_UserId_0='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."Email", u."FirstName", u."ImagePath", u."IsEmailConfirmed", u."LastName", u."PasswordHash", u."Salt", u."UserRole"
+FROM "Users" AS u
+WHERE u."Id" = @__post_UserId_0
+LIMIT 1
+2022-10-07 16:32:08.419 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__post_UserId_0='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."Email", u."FirstName", u."ImagePath", u."IsEmailConfirmed", u."LastName", u."PasswordHash", u."Salt", u."UserRole"
+FROM "Users" AS u
+WHERE u."Id" = @__post_UserId_0
+LIMIT 1
+2022-10-07 16:32:08.421 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__post_UserId_0='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."Email", u."FirstName", u."ImagePath", u."IsEmailConfirmed", u."LastName", u."PasswordHash", u."Salt", u."UserRole"
+FROM "Users" AS u
+WHERE u."Id" = @__post_UserId_0
+LIMIT 1
+2022-10-07 16:32:08.424 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__post_UserId_0='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."Email", u."FirstName", u."ImagePath", u."IsEmailConfirmed", u."LastName", u."PasswordHash", u."Salt", u."UserRole"
+FROM "Users" AS u
+WHERE u."Id" = @__post_UserId_0
+LIMIT 1
+2022-10-07 16:32:08.428 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__post_UserId_0='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."Email", u."FirstName", u."ImagePath", u."IsEmailConfirmed", u."LastName", u."PasswordHash", u."Salt", u."UserRole"
+FROM "Users" AS u
+WHERE u."Id" = @__post_UserId_0
+LIMIT 1
+2022-10-07 16:32:08.430 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__post_UserId_0='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."Email", u."FirstName", u."ImagePath", u."IsEmailConfirmed", u."LastName", u."PasswordHash", u."Salt", u."UserRole"
+FROM "Users" AS u
+WHERE u."Id" = @__post_UserId_0
+LIMIT 1
+2022-10-07 16:32:08.433 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__post_UserId_0='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."Email", u."FirstName", u."ImagePath", u."IsEmailConfirmed", u."LastName", u."PasswordHash", u."Salt", u."UserRole"
+FROM "Users" AS u
+WHERE u."Id" = @__post_UserId_0
+LIMIT 1
+2022-10-07 16:32:08.433 +05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BlogApp.Api.ViewModels.Blogs.BlogViewModel, BlogApp.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-10-07 16:32:08.434 +05:00 [INF] Executed action BlogApp.Api.Controllers.BlogPostsController.GetAllAsync (BlogApp.Api) in 35.822ms
+2022-10-07 16:32:08.434 +05:00 [INF] Executed endpoint 'BlogApp.Api.Controllers.BlogPostsController.GetAllAsync (BlogApp.Api)'
+2022-10-07 16:32:08.434 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44380/api/blogposts - - - 200 - application/json;+charset=utf-8 36.5897ms
+2022-10-07 16:32:09.521 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44380/api/blogposts - -
+2022-10-07 16:32:09.521 +05:00 [INF] Executing endpoint 'BlogApp.Api.Controllers.BlogPostsController.GetAllAsync (BlogApp.Api)'
+2022-10-07 16:32:09.521 +05:00 [INF] Route matched with {action = "GetAll", controller = "BlogPosts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllAsync(BlogApp.Api.Commons.Helpers.PaginationParams) on controller BlogApp.Api.Controllers.BlogPostsController (BlogApp.Api).
+2022-10-07 16:32:09.523 +05:00 [INF] Entity Framework Core 6.0.9 initialized 'AppDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.7+5b98e4b74de93b590b44aef8dd7967c03acc433c' with options: None
+2022-10-07 16:32:09.524 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)::INT
+FROM "BlogPosts" AS b
+2022-10-07 16:32:09.526 +05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT b."Id", b."CreatedAt", b."Description", b."Title", b."UpdatedAt", b."UserId", b."ViewCount"
+FROM "BlogPosts" AS b
+2022-10-07 16:32:09.528 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__post_UserId_0='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."Email", u."FirstName", u."ImagePath", u."IsEmailConfirmed", u."LastName", u."PasswordHash", u."Salt", u."UserRole"
+FROM "Users" AS u
+WHERE u."Id" = @__post_UserId_0
+LIMIT 1
+2022-10-07 16:32:09.533 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__post_UserId_0='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."Email", u."FirstName", u."ImagePath", u."IsEmailConfirmed", u."LastName", u."PasswordHash", u."Salt", u."UserRole"
+FROM "Users" AS u
+WHERE u."Id" = @__post_UserId_0
+LIMIT 1
+2022-10-07 16:32:09.536 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__post_UserId_0='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."Email", u."FirstName", u."ImagePath", u."IsEmailConfirmed", u."LastName", u."PasswordHash", u."Salt", u."UserRole"
+FROM "Users" AS u
+WHERE u."Id" = @__post_UserId_0
+LIMIT 1
+2022-10-07 16:32:09.538 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__post_UserId_0='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."Email", u."FirstName", u."ImagePath", u."IsEmailConfirmed", u."LastName", u."PasswordHash", u."Salt", u."UserRole"
+FROM "Users" AS u
+WHERE u."Id" = @__post_UserId_0
+LIMIT 1
+2022-10-07 16:32:09.540 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__post_UserId_0='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."Email", u."FirstName", u."ImagePath", u."IsEmailConfirmed", u."LastName", u."PasswordHash", u."Salt", u."UserRole"
+FROM "Users" AS u
+WHERE u."Id" = @__post_UserId_0
+LIMIT 1
+2022-10-07 16:32:09.542 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__post_UserId_0='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."Email", u."FirstName", u."ImagePath", u."IsEmailConfirmed", u."LastName", u."PasswordHash", u."Salt", u."UserRole"
+FROM "Users" AS u
+WHERE u."Id" = @__post_UserId_0
+LIMIT 1
+2022-10-07 16:32:09.545 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__post_UserId_0='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."Email", u."FirstName", u."ImagePath", u."IsEmailConfirmed", u."LastName", u."PasswordHash", u."Salt", u."UserRole"
+FROM "Users" AS u
+WHERE u."Id" = @__post_UserId_0
+LIMIT 1
+2022-10-07 16:32:09.547 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__post_UserId_0='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."Email", u."FirstName", u."ImagePath", u."IsEmailConfirmed", u."LastName", u."PasswordHash", u."Salt", u."UserRole"
+FROM "Users" AS u
+WHERE u."Id" = @__post_UserId_0
+LIMIT 1
+2022-10-07 16:32:09.549 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__post_UserId_0='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."Email", u."FirstName", u."ImagePath", u."IsEmailConfirmed", u."LastName", u."PasswordHash", u."Salt", u."UserRole"
+FROM "Users" AS u
+WHERE u."Id" = @__post_UserId_0
+LIMIT 1
+2022-10-07 16:32:09.551 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__post_UserId_0='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."Email", u."FirstName", u."ImagePath", u."IsEmailConfirmed", u."LastName", u."PasswordHash", u."Salt", u."UserRole"
+FROM "Users" AS u
+WHERE u."Id" = @__post_UserId_0
+LIMIT 1
+2022-10-07 16:32:09.552 +05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BlogApp.Api.ViewModels.Blogs.BlogViewModel, BlogApp.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-10-07 16:32:09.552 +05:00 [INF] Executed action BlogApp.Api.Controllers.BlogPostsController.GetAllAsync (BlogApp.Api) in 30.8714ms
+2022-10-07 16:32:09.553 +05:00 [INF] Executed endpoint 'BlogApp.Api.Controllers.BlogPostsController.GetAllAsync (BlogApp.Api)'
+2022-10-07 16:32:09.554 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44380/api/blogposts - - - 200 - application/json;+charset=utf-8 32.5727ms
+2022-10-07 16:32:17.211 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44380/api/blogposts - -
+2022-10-07 16:32:17.211 +05:00 [INF] Executing endpoint 'BlogApp.Api.Controllers.BlogPostsController.GetAllAsync (BlogApp.Api)'
+2022-10-07 16:32:17.211 +05:00 [INF] Route matched with {action = "GetAll", controller = "BlogPosts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllAsync(BlogApp.Api.Commons.Helpers.PaginationParams) on controller BlogApp.Api.Controllers.BlogPostsController (BlogApp.Api).
+2022-10-07 16:32:17.212 +05:00 [INF] Entity Framework Core 6.0.9 initialized 'AppDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.7+5b98e4b74de93b590b44aef8dd7967c03acc433c' with options: None
+2022-10-07 16:32:17.213 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)::INT
+FROM "BlogPosts" AS b
+2022-10-07 16:32:17.214 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT b."Id", b."CreatedAt", b."Description", b."Title", b."UpdatedAt", b."UserId", b."ViewCount"
+FROM "BlogPosts" AS b
+2022-10-07 16:32:17.216 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__post_UserId_0='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."Email", u."FirstName", u."ImagePath", u."IsEmailConfirmed", u."LastName", u."PasswordHash", u."Salt", u."UserRole"
+FROM "Users" AS u
+WHERE u."Id" = @__post_UserId_0
+LIMIT 1
+2022-10-07 16:32:17.220 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__post_UserId_0='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."Email", u."FirstName", u."ImagePath", u."IsEmailConfirmed", u."LastName", u."PasswordHash", u."Salt", u."UserRole"
+FROM "Users" AS u
+WHERE u."Id" = @__post_UserId_0
+LIMIT 1
+2022-10-07 16:32:17.223 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__post_UserId_0='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."Email", u."FirstName", u."ImagePath", u."IsEmailConfirmed", u."LastName", u."PasswordHash", u."Salt", u."UserRole"
+FROM "Users" AS u
+WHERE u."Id" = @__post_UserId_0
+LIMIT 1
+2022-10-07 16:32:17.225 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__post_UserId_0='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."Email", u."FirstName", u."ImagePath", u."IsEmailConfirmed", u."LastName", u."PasswordHash", u."Salt", u."UserRole"
+FROM "Users" AS u
+WHERE u."Id" = @__post_UserId_0
+LIMIT 1
+2022-10-07 16:32:17.228 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__post_UserId_0='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."Email", u."FirstName", u."ImagePath", u."IsEmailConfirmed", u."LastName", u."PasswordHash", u."Salt", u."UserRole"
+FROM "Users" AS u
+WHERE u."Id" = @__post_UserId_0
+LIMIT 1
+2022-10-07 16:32:17.231 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__post_UserId_0='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."Email", u."FirstName", u."ImagePath", u."IsEmailConfirmed", u."LastName", u."PasswordHash", u."Salt", u."UserRole"
+FROM "Users" AS u
+WHERE u."Id" = @__post_UserId_0
+LIMIT 1
+2022-10-07 16:32:17.233 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__post_UserId_0='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."Email", u."FirstName", u."ImagePath", u."IsEmailConfirmed", u."LastName", u."PasswordHash", u."Salt", u."UserRole"
+FROM "Users" AS u
+WHERE u."Id" = @__post_UserId_0
+LIMIT 1
+2022-10-07 16:32:17.236 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__post_UserId_0='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."Email", u."FirstName", u."ImagePath", u."IsEmailConfirmed", u."LastName", u."PasswordHash", u."Salt", u."UserRole"
+FROM "Users" AS u
+WHERE u."Id" = @__post_UserId_0
+LIMIT 1
+2022-10-07 16:32:17.239 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__post_UserId_0='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."Email", u."FirstName", u."ImagePath", u."IsEmailConfirmed", u."LastName", u."PasswordHash", u."Salt", u."UserRole"
+FROM "Users" AS u
+WHERE u."Id" = @__post_UserId_0
+LIMIT 1
+2022-10-07 16:32:17.241 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__post_UserId_0='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."Email", u."FirstName", u."ImagePath", u."IsEmailConfirmed", u."LastName", u."PasswordHash", u."Salt", u."UserRole"
+FROM "Users" AS u
+WHERE u."Id" = @__post_UserId_0
+LIMIT 1
+2022-10-07 16:32:17.242 +05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BlogApp.Api.ViewModels.Blogs.BlogViewModel, BlogApp.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-10-07 16:32:17.244 +05:00 [INF] Executed action BlogApp.Api.Controllers.BlogPostsController.GetAllAsync (BlogApp.Api) in 32.8118ms
+2022-10-07 16:32:17.244 +05:00 [INF] Executed endpoint 'BlogApp.Api.Controllers.BlogPostsController.GetAllAsync (BlogApp.Api)'
+2022-10-07 16:32:17.245 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44380/api/blogposts - - - 200 - application/json;+charset=utf-8 33.5356ms

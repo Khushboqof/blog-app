@@ -1,5 +1,4 @@
-﻿
-using BlogApp.Api.Commons.Helpers;
+﻿using BlogApp.Api.Commons.Helpers;
 using BlogApp.Api.Inerfaces.Services;
 
 namespace BlogApp.Api.Services
@@ -11,14 +10,14 @@ namespace BlogApp.Api.Services
 
         public FileService(IWebHostEnvironment webHost)
         {
-            _basePath = webHost.ContentRootPath;
+            _basePath = webHost.WebRootPath;
         }
 
         public async Task<string> SaveImageAsync(IFormFile file)
         {
             string fileName = ImageHelper.MakeImageName(file.FileName);
             string partPath = Path.Combine(_imageFolderName, fileName);
-            string path = Path.Combine(_basePath, "wwwroot", partPath);
+            string path = Path.Combine(_basePath, partPath);
 
             var stream = File.Create(path);
             await file.CopyToAsync(stream);

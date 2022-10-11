@@ -1,6 +1,7 @@
 ﻿using BlogApp.Api.Inerfaces.Services;
 using BlogApp.Api.Services;
 using BlogApp.Api.ViewModels.Users;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BlogApp.Api.Controllers
@@ -16,7 +17,7 @@ namespace BlogApp.Api.Controllers
             _accountService = accountService;
         }
 
-        [HttpPost("registr")]
+        [HttpPost("registr"), AllowAnonymous]
         public async Task<IActionResult> RegistrAsync([FromForm] UserCreateViewModel createViewModel)
         {
             var res = await _accountService.RegistrAsync(createViewModel);

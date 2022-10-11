@@ -1,6 +1,7 @@
 ﻿using BlogApp.Api.Commons.Helpers;
 using BlogApp.Api.Inerfaces.Services;
 using BlogApp.Api.ViewModels.Users;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BlogApp.Api.Controllers
@@ -22,11 +23,11 @@ namespace BlogApp.Api.Controllers
         public async Task<IActionResult> GetAsync(long id)
             => Ok(await _userService.GetAsync(o => o.Id == id));
 
-        [HttpDelete("{id}")]
+        [HttpDelete("{id}"), Authorize]
         public async Task<IActionResult> DeleteAsync(long id)
             => Ok(await _userService.DeleteAsync(o => o.Id == id));
 
-        [HttpPut("{id}")]
+        [HttpPut("{id}"), Authorize]
         public async Task<IActionResult> UpdateAsync(long id, [FromForm] UserCreateViewModel userCreateView)
             => Ok(await _userService.UpdateAsync(id, userCreateView));
 

@@ -29,6 +29,7 @@ namespace BlogApp.Api.Services
             return user;
         }
 
+
         public async Task<IEnumerable<UserViewModel>> GetAllAsync(PaginationParams? pagination = null, Expression<Func<User, bool>>? expression = null)
         {
             var users = _userRepositroy.GetAll(expression).ToPaged(pagination);
