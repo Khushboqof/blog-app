@@ -12,6 +12,8 @@ namespace BlogApp.Api.ViewModels.Blogs
 
         public long ViewCount { get; set; } = 0;
 
+        public string ImageUrl { get; set; } = string.Empty;
+
         public DateTime CreatedAt { get; set; }
 
         public DateTime UpdatedAt { get; set; }
@@ -26,7 +28,8 @@ namespace BlogApp.Api.ViewModels.Blogs
                 Description = blog.Description,
                 CreatedAt = blog.CreatedAt,
                 UpdatedAt = blog.UpdatedAt,
-                ViewCount = blog.ViewCount
+                ViewCount = blog.ViewCount,
+                ImageUrl = blog.ImagePath
             };
         }
     }

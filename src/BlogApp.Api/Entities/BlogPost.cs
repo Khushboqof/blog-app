@@ -10,6 +10,8 @@
 
         public long ViewCount { get; set; } = 0;
 
+        public string ImagePath { get; set; } = string.Empty;
+
         public DateTime CreatedAt { get; set; }
 
         public DateTime UpdatedAt { get; set; }

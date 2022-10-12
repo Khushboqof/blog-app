@@ -4,6 +4,7 @@ using BlogApp.Api.Entities;
 using BlogApp.Api.Inerfaces.Repositories;
 using BlogApp.Api.Inerfaces.Services;
 using BlogApp.Api.ViewModels.Blogs;
+using BlogApp.Api.ViewModels.Users;
 using System.Linq.Expressions;
 using System.Net;
 
@@ -13,17 +14,24 @@ namespace BlogApp.Api.Services
     {
         private readonly IBlogAppRepository _blogAppRepository;
         private readonly IUserRepositroy _userRepository;
+        private readonly IFileService _fileservice;
 
         public BlogPostService(IBlogAppRepository blogAppRepository,
-            IUserRepositroy userRepositroy)
+            IUserRepositroy userRepositroy,
+            IFileService fileservice)
         {
             _blogAppRepository = blogAppRepository;
             _userRepository = userRepositroy;
+            _fileservice = fileservice;
         }
 
         public async Task<bool> CreateAsync(BlogCreateViewModel viewModel)
         {
             var blogPost = (BlogPost)viewModel;
+
+
+            if (blogPost.ImagePath is not null)
+                    blogPost.ImagePath = await _fileservice.SaveImageAsync(viewModel.Image);
 
             blogPost.CreatedAt = DateTime.UtcNow;
 
@@ -70,7 +78,7 @@ namespace BlogApp.Api.Services
 
                 blogViews.Add(blogView);
             }
-
+                
             return blogViews;
         }
 
@@ -110,11 +118,13 @@ namespace BlogApp.Api.Services
             var post = await _blogAppRepository.GetAsync(o => o.Id == id);
 
             if (post is null)
-                throw new StatusCodeException(HttpStatusCode.NotFound, message: "User not found");
+                throw new StatusCodeException(HttpStatusCode.NotFound, message: "Post not found");
+
+            if (viewModel.Image is not null)
+                post.ImagePath = await _fileservice.SaveImageAsync(viewModel.Image);
 
             post.Title = viewModel.Title;
             post.Description = viewModel.Description;
-            post.UserId = viewModel.UserId;
             post.UpdatedAt = DateTime.UtcNow;
 
             var UpdatePost = await _blogAppRepository.UpdateAsync(post);
