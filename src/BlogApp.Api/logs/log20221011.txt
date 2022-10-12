@@ -68,3 +68,15 @@ ALTER TABLE "Users" ADD "IsEmailConfirmed" boolean NOT NULL DEFAULT FALSE;
 2022-10-11 12:01:45.876 +05:00 [INF] Executed DbCommand (303ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
 INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
 VALUES ('20221005055956_Mig', '6.0.9');
+2022-10-11 18:34:12.369 +05:00 [INF] User profile is available. Using 'C:\Users\Elbek\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-10-11 18:34:12.629 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-10-11 18:34:12.629 +05:00 [INF] Hosting environment: Development
+2022-10-11 18:34:12.629 +05:00 [INF] Content root path: C:\Users\Elbek\Desktop\blog-app\src\BlogApp.Api\
+2022-10-11 18:34:12.656 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44380/swagger/index.html - -
+2022-10-11 18:34:13.406 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44380/swagger/index.html - - - 200 - text/html;charset=utf-8 750.9387ms
+2022-10-11 18:34:13.408 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44380/_framework/aspnetcore-browser-refresh.js - -
+2022-10-11 18:34:13.411 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44380/_vs/browserLink - -
+2022-10-11 18:34:13.414 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44380/_framework/aspnetcore-browser-refresh.js - - - 200 11992 application/javascript;+charset=utf-8 4.5745ms
+2022-10-11 18:34:13.451 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44380/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 40.5947ms
+2022-10-11 18:34:13.508 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44380/swagger/v1/swagger.json - -
+2022-10-11 18:34:13.609 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44380/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 100.5623ms
