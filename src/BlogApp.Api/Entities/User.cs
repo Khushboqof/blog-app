@@ -22,6 +22,5 @@ namespace BlogApp.Api.Entities
         public string Salt { get; set; } = string.Empty;
 
         public UserRole UserRole { get; set; } = UserRole.User;
-
     }
 }

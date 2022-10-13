@@ -33,6 +33,9 @@ namespace BlogApp.Api.Services
             if (blogPost.ImagePath is not null)
                     blogPost.ImagePath = await _fileservice.SaveImageAsync(viewModel.Image);
 
+            if (HttpContextHelper.UserId != null)
+                blogPost.UserId = (long)HttpContextHelper.UserId;
+
             blogPost.CreatedAt = DateTime.UtcNow;
 
             await _blogAppRepository.CreateAsync(blogPost);
@@ -71,6 +74,7 @@ namespace BlogApp.Api.Services
                     Title = post.Title,
                     Description = post.Description,
                     Username = (user.FirstName + " " + user.LastName + "," + user.Id),
+                    ImageUrl = post.ImagePath,
                     ViewCount = post.ViewCount,
                     CreatedAt = post.CreatedAt,
                     UpdatedAt = post.UpdatedAt
