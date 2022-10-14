@@ -18,7 +18,7 @@ namespace BlogApp.Api.Controllers
         }
 
         [HttpPost("registr"), AllowAnonymous]
-        public async Task<IActionResult> RegistrAsync([FromForm] UserCreateViewModel createViewModel)
+        public async Task<IActionResult> RegistrAsync(UserCreateViewModel createViewModel)
         {
             var res = await _accountService.RegistrAsync(createViewModel);
             return Ok(res);
