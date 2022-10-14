@@ -22,3 +22,15 @@
 2022-10-15 01:56:45.776 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44380/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 132.9372ms
 2022-10-15 01:56:45.844 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44380/swagger/v1/swagger.json - -
 2022-10-15 01:56:46.150 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44380/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 305.7146ms
+2022-10-15 02:15:44.094 +05:00 [INF] User profile is available. Using 'C:\Users\Elbek\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-10-15 02:15:44.491 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-10-15 02:15:44.544 +05:00 [INF] Hosting environment: Development
+2022-10-15 02:15:44.544 +05:00 [INF] Content root path: C:\Users\Elbek\Desktop\blog-app\src\BlogApp.Api\
+2022-10-15 02:15:44.602 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44380/swagger/index.html - -
+2022-10-15 02:15:45.279 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44380/_vs/browserLink - -
+2022-10-15 02:15:45.279 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44380/_framework/aspnetcore-browser-refresh.js - -
+2022-10-15 02:15:45.310 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44380/swagger/index.html - - - 200 - text/html;charset=utf-8 710.0708ms
+2022-10-15 02:15:45.310 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44380/_framework/aspnetcore-browser-refresh.js - - - 200 11992 application/javascript;+charset=utf-8 25.6562ms
+2022-10-15 02:15:45.394 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44380/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 115.1288ms
+2022-10-15 02:15:45.461 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44380/swagger/v1/swagger.json - -
+2022-10-15 02:15:45.752 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44380/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 291.1400ms
