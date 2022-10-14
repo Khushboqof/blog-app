@@ -25,6 +25,8 @@ namespace BlogApp.Api.ViewModels.Users
                 Id = user.Id,
                 FirstName = user.FirstName,
                 LastName = user.LastName,
+                Username = user.Username,   
+                IsEmailConfirmed = user.IsEmailConfirmed,
                 Email = user.Email,
                 ImageUrl = user.ImagePath
             };

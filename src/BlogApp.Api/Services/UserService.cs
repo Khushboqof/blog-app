@@ -1,5 +1,6 @@
 ﻿using BlogApp.Api.Commons.Exceptions;
 using BlogApp.Api.Commons.Helpers;
+using BlogApp.Api.Commons.Security;
 using BlogApp.Api.Entities;
 using BlogApp.Api.Inerfaces.Repositories;
 using BlogApp.Api.Inerfaces.Services;
@@ -24,9 +25,15 @@ namespace BlogApp.Api.Services
 
         public async Task<bool> DeleteAsync(Expression<Func<User, bool>> expression)
         {
-            var user = await _userRepositroy.DeleteAsync(expression);
-            await _userRepositroy.SaveAsync();
-            return user;
+            var result = await _userRepositroy.GetAsync(expression);
+            if (HttpContextHelper.UserId == result.Id)
+            {
+                var user = await _userRepositroy.DeleteAsync(expression);
+                await _userRepositroy.SaveAsync();
+                return user;
+            }
+            throw new StatusCodeException(HttpStatusCode.NotFound, "Error");
+            
         }
 
         public async Task<IEnumerable<UserViewModel>> GetAllAsync(PaginationParams? pagination = null, Expression<Func<User, bool>>? expression = null)
@@ -34,6 +41,7 @@ namespace BlogApp.Api.Services
             var users = _userRepositroy.GetAll(expression).ToPaged(pagination);
 
             var userviewModel = new List<UserViewModel>();
+            
             foreach (var user in users)
             {
                 userviewModel.Add((UserViewModel)user);
@@ -63,6 +71,12 @@ namespace BlogApp.Api.Services
 
             if (viewModel.Image is not null)
                 user.ImagePath = await _fileService.SaveImageAsync(viewModel.Image);
+
+            var hashResult = PasswordHasher.Hash(viewModel.Password);
+
+            user.Salt = hashResult.Salt;
+
+            user.PasswordHash = hashResult.Hash;
 
             user.FirstName = viewModel.FirstName;
             user.LastName = viewModel.LastName;

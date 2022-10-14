@@ -17,6 +17,7 @@ namespace BlogApp.Api.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<User>().HasIndex(o => o.Email).IsUnique();
+            modelBuilder.Entity<User>().HasIndex(o => o.Username).IsUnique();
         }
     }
 }
