@@ -8,6 +8,7 @@ using BlogApp.Api.Inerfaces.Repositories;
 using BlogApp.Api.Inerfaces.Services;
 using BlogApp.Api.Repositrories;
 using BlogApp.Api.Services;
+using Microsoft.AspNetCore.Cors.Infrastructure;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
 
@@ -39,6 +40,13 @@ builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IFileService, FileService>();
 builder.Services.AddScoped<IAuthManager, AuthManager>();
 builder.Services.AddScoped<IEmailService, EmailService>();
+builder.Services.AddCors(CorsOptions =>
+{
+    CorsOptions.AddPolicy("AllowAll", corsAccesses =>
+    corsAccesses.AllowAnyOrigin().AllowAnyHeader().AllowAnyOrigin().AllowAnyHeader()
+    );
+});
+
 
 builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 
@@ -61,6 +69,8 @@ HttpContextHelper.Accessor = app.Services.GetRequiredService<IHttpContextAccesso
 app.UseMiddleware<ExceptionHandlerMiddlewar>();
 
 app.UseHttpsRedirection();
+
+app.UseCors("AllowAll");
 
 app.UseAuthentication();
 
