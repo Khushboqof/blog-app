@@ -22,7 +22,10 @@ builder.Services.ConfigureSwaggerAuthorize();
 //Database
 var connectionString = builder.Configuration.GetConnectionString("PostgresManagement");
 builder.Services.AddDbContext<AppDbContext>(options =>
-   options.UseNpgsql(connectionString));
+{
+    options.UseNpgsql(connectionString);
+    options.UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
+});
 
 //Repositories
 builder.Services.AddScoped<IBlogAppRepository, BlogAppRepository>();

@@ -5,6 +5,7 @@ using BlogApp.Api.Entities;
 using BlogApp.Api.Inerfaces.Repositories;
 using BlogApp.Api.Inerfaces.Services;
 using BlogApp.Api.ViewModels.Users;
+using Microsoft.EntityFrameworkCore.Query.SqlExpressions;
 using System.Linq.Expressions;
 using System.Net;
 
@@ -62,33 +63,31 @@ namespace BlogApp.Api.Services
             return viewUser;
         }
 
-        public async Task<User> UpdateAsync(long id, UserCreateViewModel viewModel)
+        public async Task<UserViewModel> UpdateAsync(long id, UserCreateViewModel viewModel)
         {
             var user = await _userRepositroy.GetAsync(o => o.Id == id);
 
             if (user is null)
                 throw new StatusCodeException(HttpStatusCode.NotFound, message: "User not found");
 
+            if (HttpContextHelper.UserId != id)
+                throw new StatusCodeException(HttpStatusCode.BadRequest, "must enter correct id");
+
+            user = (User)viewModel;
+            user.Id = id;
             if (viewModel.Image is not null)
                 user.ImagePath = await _fileService.SaveImageAsync(viewModel.Image);
 
             var hashResult = PasswordHasher.Hash(viewModel.Password);
-
             user.Salt = hashResult.Salt;
-
             user.PasswordHash = hashResult.Hash;
 
-            user.FirstName = viewModel.FirstName;
-            user.LastName = viewModel.LastName;
-            user.Username = viewModel.Username;
-            user.Email = viewModel.Email;
-            user.PasswordHash = viewModel.Password;
 
-            var updateUser = await _userRepositroy.UpdateAsync(user);
+            user = await _userRepositroy.UpdateAsync(user);
 
             await _userRepositroy.SaveAsync();
-
-            return user;
+            
+            return (UserViewModel)user;
         }
     }
 }

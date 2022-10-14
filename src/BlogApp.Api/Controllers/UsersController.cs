@@ -27,7 +27,7 @@ namespace BlogApp.Api.Controllers
         public async Task<IActionResult> DeleteAsync(long id)
             => Ok(await _userService.DeleteAsync(o => o.Id == id));
 
-        [HttpPut("{id}"), Authorize]
+        [HttpPut("{id}")]
         public async Task<IActionResult> UpdateAsync(long id, [FromForm] UserCreateViewModel userCreateView)
             => Ok(await _userService.UpdateAsync(id, userCreateView));
 
