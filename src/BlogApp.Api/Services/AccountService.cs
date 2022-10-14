@@ -117,5 +117,25 @@ namespace BlogApp.Api.Services
             else
                 throw new StatusCodeException(HttpStatusCode.BadRequest, message: "Code is expired");
         }
+
+        public async Task<bool> VerifyPasswordAsync(UserResetPasswordViewModel password)
+        {
+            var user = await _repositroy.GetAsync(p => p.Email == password.Email);
+
+            if (user is null)
+                throw new StatusCodeException(HttpStatusCode.NotFound, message: "user not found!");
+
+            if (user.IsEmailConfirmed is false)
+                throw new StatusCodeException(HttpStatusCode.BadRequest, message: "email did not verified!");
+
+            var changedPassword = PasswordHasher.ChangePassword(password.Password, user.Salt);
+
+            user.PasswordHash = changedPassword;
+
+            await _repositroy.UpdateAsync(user);
+            await _repositroy.SaveAsync();
+
+            throw new StatusCodeException(HttpStatusCode.OK, message: "true");
+        }
     }
 }

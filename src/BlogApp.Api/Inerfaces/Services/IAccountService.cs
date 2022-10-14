@@ -11,5 +11,8 @@ namespace BlogApp.Api.Inerfaces.Services
         Task<bool> VerifyEmail(EmailVerify emailVerify);
 
         Task SendCodeAsync(SendToEmail email);
+
+        Task<bool> VerifyPasswordAsync(UserResetPasswordViewModel password);
+
     }
 }

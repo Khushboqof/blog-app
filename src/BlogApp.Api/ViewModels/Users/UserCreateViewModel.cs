@@ -20,6 +20,9 @@ namespace BlogApp.Api.ViewModels.Users
             "last name must be contains only letters or ' character")]
         public string LastName { get; set; } = string.Empty;
 
+        [Required, MaxLength(50), MinLength(2)]
+        public string Username { get; set; } = string.Empty;
+
         [Required(ErrorMessage = "Email is required")]
         [RegularExpression(@"^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$",
             ErrorMessage = "Please enter valid email")]

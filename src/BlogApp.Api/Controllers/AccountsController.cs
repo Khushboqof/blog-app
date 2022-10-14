@@ -24,7 +24,7 @@ namespace BlogApp.Api.Controllers
             return Ok(res);
         }
 
-        [HttpPost("login")]
+        [HttpPost("login"), AllowAnonymous]
         public async Task<IActionResult> LogInAsync([FromForm] UserLoginViewModel viewModel)
             => Ok( new { Token = await _accountService.LogInAsync(viewModel)});
 
@@ -32,11 +32,16 @@ namespace BlogApp.Api.Controllers
         public async Task<IActionResult> VerifyEmail([FromBody] EmailVerify email)
             => Ok(await _accountService.VerifyEmail(email));
 
-        [HttpPost("sendcode")]
+        [HttpPost("sendcode"), AllowAnonymous]
         public async Task<IActionResult> SendToEmail([FromBody] SendToEmail email)
         {
             await _accountService.SendCodeAsync(email);
             return Ok();
         }
+
+        [HttpPost("reset-password"), AllowAnonymous]
+        public async Task<IActionResult> ForgotPasswordAsync([FromQuery] UserResetPasswordViewModel forgetPassword)
+            => Ok(await _accountService.VerifyPasswordAsync(forgetPassword));
     }
+            
 }

@@ -73,13 +73,13 @@ namespace BlogApp.Api.Services
                     Id = post.Id,
                     Title = post.Title,
                     Description = post.Description,
-                    Username = (user.FirstName + " " + user.LastName + "," + user.Id),
+                    Username = user.Username,
                     ImageUrl = post.ImagePath,
                     ViewCount = post.ViewCount,
                     CreatedAt = post.CreatedAt,
                     UpdatedAt = post.UpdatedAt
                 };
-
+                
                 blogViews.Add(blogView);
             }
                 
@@ -101,7 +101,7 @@ namespace BlogApp.Api.Services
                     Id = post.Id,
                     Title = post.Title,
                     Description = post.Description,
-                    Username = ((user.FirstName + " " + user.LastName)),
+                    Username = user.Username,
                     ViewCount = post.ViewCount,
                     CreatedAt = post.CreatedAt,
                     UpdatedAt = post.UpdatedAt
