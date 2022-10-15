@@ -1,6 +1,7 @@
 ﻿using BlogApp.Api.Commons.Exceptions;
 using BlogApp.Api.Commons.Helpers;
 using BlogApp.Api.Entities;
+using BlogApp.Api.Enums;
 using BlogApp.Api.Inerfaces.Repositories;
 using BlogApp.Api.Inerfaces.Services;
 using BlogApp.Api.ViewModels.Blogs;
@@ -50,6 +51,9 @@ namespace BlogApp.Api.Services
 
             if (post is null)
                 throw new StatusCodeException(HttpStatusCode.NotFound, message: "No such blog post exists");
+
+            if (post.Id != HttpContextHelper.UserId)
+                throw new StatusCodeException(HttpStatusCode.BadRequest, message: "must enter correct id");
 
             await _blogAppRepository.DeleteAsync(expression);
             await _blogAppRepository.SaveAsync();

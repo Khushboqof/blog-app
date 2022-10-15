@@ -34,7 +34,6 @@ namespace BlogApp.Api.Services
                 return user;
             }
             throw new StatusCodeException(HttpStatusCode.NotFound, "Error");
-            
         }
 
         public async Task<IEnumerable<UserViewModel>> GetAllAsync(PaginationParams? pagination = null, Expression<Func<User, bool>>? expression = null)
