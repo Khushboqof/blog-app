@@ -25,7 +25,7 @@ namespace BlogApp.Api.Controllers
         }
 
         [HttpPost("login"), AllowAnonymous]
-        public async Task<IActionResult> LogInAsync(UserLoginViewModel viewModel)
+        public async Task<IActionResult> LogInAsync([FromForm]UserLoginViewModel viewModel)
             => Ok( new { Token = await _accountService.LogInAsync(viewModel)});
 
         [HttpPost("verifyemail")]
