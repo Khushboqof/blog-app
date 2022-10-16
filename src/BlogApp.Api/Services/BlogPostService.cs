@@ -125,11 +125,12 @@ namespace BlogApp.Api.Services
         public async Task<BlogPost> UpdateAsync(long id, BlogCreateViewModel viewModel)
         {
             var post = await _blogAppRepository.GetAsync(o => o.Id == id);
+            var user = await _userRepository.GetAsync(o => o.Id == post.UserId);
 
             if (post is null)
                 throw new StatusCodeException(HttpStatusCode.NotFound, message: "Post not found");
 
-            if (post.Id != HttpContextHelper.UserId)
+            if (user.Id != HttpContextHelper.UserId)
                 throw new StatusCodeException(HttpStatusCode.BadRequest, message: "must enter correct id");
 
             if (viewModel.Image is not null)
@@ -137,7 +138,7 @@ namespace BlogApp.Api.Services
 
             post.Title = viewModel.Title;
             post.Description = viewModel.Description;
-            post.UpdatedAt = DateTime.UtcNow;
+            post.UpdatedAt = DateTime.UtcNow;      
 
             var UpdatePost = await _blogAppRepository.UpdateAsync(post);
             await _blogAppRepository.SaveAsync();
