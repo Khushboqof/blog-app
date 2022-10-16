@@ -44,7 +44,7 @@ namespace BlogApp.Api.ViewModels.Users
             {
                 FirstName = userCreateView.FirstName,
                 LastName = userCreateView.LastName,
-                Username = userCreateView.Username, 
+                Username = userCreateView.Username,
                 Email = userCreateView.Email,
                 PasswordHash = userCreateView.Password,
             };

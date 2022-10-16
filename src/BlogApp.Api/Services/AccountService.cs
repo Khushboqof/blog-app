@@ -42,7 +42,7 @@ namespace BlogApp.Api.Services
             }
             throw new StatusCodeException(HttpStatusCode.NotFound, message: "email is wrong");
 
-            if(user.IsEmailConfirmed is false)
+            if (user.IsEmailConfirmed is false)
                 throw new StatusCodeException(HttpStatusCode.BadRequest, message: "email did not verified!");
         }
 

@@ -22,12 +22,12 @@ namespace BlogApp.Api.Data
             modelBuilder.Entity<BlogPost>()
                 .HasOne<User>(s => s.User)
                 .WithMany(o => o.BlogPosts)
-                .HasForeignKey(o => o.UserId)   
+                .HasForeignKey(o => o.UserId)
                 .IsRequired(true)
                 .OnDelete(DeleteBehavior.Cascade);
         }
 
-       
+
 
     }
 }

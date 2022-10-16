@@ -1,5 +1,4 @@
 ﻿using BlogApp.Api.Enums;
-using BlogApp.Api.ViewModels.Users;
 
 namespace BlogApp.Api.Entities
 {

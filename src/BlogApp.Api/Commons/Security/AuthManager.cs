@@ -3,13 +3,11 @@ using BlogApp.Api.Inerfaces.Managers;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
-using System.Security.Cryptography;
 using System.Text;
-using TechTalk.SpecFlow.EnvironmentAccess;
 
 namespace BlogApp.Api.Commons.Security
 {
-    public class AuthManager: IAuthManager
+    public class AuthManager : IAuthManager
     {
         private readonly IConfigurationSection _configuration;
 
@@ -17,7 +15,7 @@ namespace BlogApp.Api.Commons.Security
         {
             _configuration = configuration.GetSection("Jwt");
         }
-         
+
         public string GenerateToken(User user)
         {
             var claims = new[]
@@ -34,7 +32,7 @@ namespace BlogApp.Api.Commons.Security
                 expires: DateTime.Now.AddMinutes(double.Parse(_configuration["Lifetime"])),
                 signingCredentials: credentials);
 
-            return new JwtSecurityTokenHandler().WriteToken(tokenDescription);  
+            return new JwtSecurityTokenHandler().WriteToken(tokenDescription);
         }
     }
 }

@@ -21,15 +21,14 @@ namespace BlogApp.Api.Services
             var email = new MimeMessage();
             email.From.Add(MailboxAddress.Parse(_config["EmailAddress"]));
             email.To.Add(MailboxAddress.Parse(emailMesage.To));
-            email.Subject = emailMesage.Subject;  
-            email.Body = new TextPart(TextFormat.Html) { Text = emailMesage.Body.ToString() }; 
+            email.Subject = emailMesage.Subject;
+            email.Body = new TextPart(TextFormat.Html) { Text = emailMesage.Body.ToString() };
 
             var smtp = new SmtpClient();
             await smtp.ConnectAsync(_config["Host"], 587, SecureSocketOptions.StartTls);
             await smtp.AuthenticateAsync(_config["EmailAddress"], _config["Password"]);
-            await smtp.SendAsync(email);    
+            await smtp.SendAsync(email);
             await smtp.DisconnectAsync(true);
         }
     }
 }
-    

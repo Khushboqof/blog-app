@@ -1,5 +1,4 @@
 ﻿using BlogApp.Api.Inerfaces.Services;
-using BlogApp.Api.Services;
 using BlogApp.Api.ViewModels.Users;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -18,15 +17,15 @@ namespace BlogApp.Api.Controllers
         }
 
         [HttpPost("registr"), AllowAnonymous]
-        public async Task<IActionResult> RegistrAsync([FromForm]UserCreateViewModel createViewModel)
+        public async Task<IActionResult> RegistrAsync([FromForm] UserCreateViewModel createViewModel)
         {
             var res = await _accountService.RegistrAsync(createViewModel);
             return Ok(res);
         }
 
         [HttpPost("login"), AllowAnonymous]
-        public async Task<IActionResult> LogInAsync([FromForm]UserLoginViewModel viewModel)
-            => Ok( new { Token = await _accountService.LogInAsync(viewModel)});
+        public async Task<IActionResult> LogInAsync([FromForm] UserLoginViewModel viewModel)
+            => Ok(new { Token = await _accountService.LogInAsync(viewModel) });
 
         [HttpPost("verifyemail")]
         public async Task<IActionResult> VerifyEmail([FromBody] EmailVerify email)
@@ -43,5 +42,5 @@ namespace BlogApp.Api.Controllers
         public async Task<IActionResult> ForgotPasswordAsync([FromQuery] UserResetPasswordViewModel forgetPassword)
             => Ok(await _accountService.VerifyPasswordAsync(forgetPassword));
     }
-            
+
 }

@@ -6,14 +6,14 @@ namespace BlogApp.Api.Configurations
 {
     public static class JwtConfiguration
     {
-        public static void ConfigureJwt(this IServiceCollection services, 
+        public static void ConfigureJwt(this IServiceCollection services,
             IConfiguration _config)
         {
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options =>
             {
                 options.TokenValidationParameters = new TokenValidationParameters()
                 {
-                    ValidateIssuer = true, 
+                    ValidateIssuer = true,
                     ValidIssuer = _config["Jwt:Issuer"],
                     ValidateAudience = false,
                     ValidateLifetime = true,

@@ -1,7 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
-using System.Security.Claims;
-
-namespace BlogApp.Api.Commons.Helpers
+﻿namespace BlogApp.Api.Commons.Helpers
 {
     public class HttpContextHelper
     {

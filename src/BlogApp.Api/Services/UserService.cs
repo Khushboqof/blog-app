@@ -5,7 +5,6 @@ using BlogApp.Api.Entities;
 using BlogApp.Api.Inerfaces.Repositories;
 using BlogApp.Api.Inerfaces.Services;
 using BlogApp.Api.ViewModels.Users;
-using Microsoft.EntityFrameworkCore.Query.SqlExpressions;
 using System.Linq.Expressions;
 using System.Net;
 
@@ -41,7 +40,7 @@ namespace BlogApp.Api.Services
             var users = _userRepositroy.GetAll(expression).ToPaged(pagination);
 
             var userviewModel = new List<UserViewModel>();
-            
+
             foreach (var user in users)
             {
                 userviewModel.Add((UserViewModel)user);
@@ -85,7 +84,7 @@ namespace BlogApp.Api.Services
             user = await _userRepositroy.UpdateAsync(user);
 
             await _userRepositroy.SaveAsync();
-            
+
             return (UserViewModel)user;
         }
     }

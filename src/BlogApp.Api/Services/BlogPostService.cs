@@ -1,11 +1,9 @@
 ﻿using BlogApp.Api.Commons.Exceptions;
 using BlogApp.Api.Commons.Helpers;
 using BlogApp.Api.Entities;
-using BlogApp.Api.Enums;
 using BlogApp.Api.Inerfaces.Repositories;
 using BlogApp.Api.Inerfaces.Services;
 using BlogApp.Api.ViewModels.Blogs;
-using BlogApp.Api.ViewModels.Users;
 using System.Linq.Expressions;
 using System.Net;
 
@@ -32,7 +30,7 @@ namespace BlogApp.Api.Services
 
 
             if (blogPost.ImagePath is not null)
-                    blogPost.ImagePath = await _fileservice.SaveImageAsync(viewModel.Image);
+                blogPost.ImagePath = await _fileservice.SaveImageAsync(viewModel.Image);
 
             if (HttpContextHelper.UserId != null)
                 blogPost.UserId = (long)HttpContextHelper.UserId;
@@ -83,10 +81,10 @@ namespace BlogApp.Api.Services
                     CreatedAt = post.CreatedAt,
                     UpdatedAt = post.UpdatedAt
                 };
-                
+
                 blogViews.Add(blogView);
             }
-                
+
             return blogViews;
         }
 
