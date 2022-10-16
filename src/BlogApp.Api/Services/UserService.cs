@@ -29,6 +29,7 @@ namespace BlogApp.Api.Services
             if (HttpContextHelper.UserId == result.Id)
             {
                 var user = await _userRepositroy.DeleteAsync(expression);
+
                 await _userRepositroy.SaveAsync();
                 return user;
             }

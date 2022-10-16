@@ -63,7 +63,6 @@ if (app.Environment.IsDevelopment() || app.Environment.IsProduction())
     app.UseSwaggerUI();
 }
 
-
 HttpContextHelper.Accessor = app.Services.GetRequiredService<IHttpContextAccessor>();
 
 app.UseMiddleware<ExceptionHandlerMiddlewar>();

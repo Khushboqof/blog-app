@@ -1,9 +1,11 @@
 ﻿using BlogApp.Api.Commons.Exceptions;
 using BlogApp.Api.Commons.Helpers;
 using BlogApp.Api.Entities;
+using BlogApp.Api.Enums;
 using BlogApp.Api.Inerfaces.Repositories;
 using BlogApp.Api.Inerfaces.Services;
 using BlogApp.Api.ViewModels.Blogs;
+using Flurl.Util;
 using System.Linq.Expressions;
 using System.Net;
 
@@ -46,11 +48,12 @@ namespace BlogApp.Api.Services
         public async Task<bool> DeleteAsync(Expression<Func<BlogPost, bool>> expression)
         {
             var post = await _blogAppRepository.GetAsync(expression);
+            var user = await _userRepository.GetAsync(o => o.Id == post.UserId);
 
             if (post is null)
                 throw new StatusCodeException(HttpStatusCode.NotFound, message: "No such blog post exists");
 
-            if (post.Id != HttpContextHelper.UserId)
+            if (HttpContextHelper.UserId != user.Id)
                 throw new StatusCodeException(HttpStatusCode.BadRequest, message: "must enter correct id");
 
             await _blogAppRepository.DeleteAsync(expression);
@@ -125,6 +128,9 @@ namespace BlogApp.Api.Services
 
             if (post is null)
                 throw new StatusCodeException(HttpStatusCode.NotFound, message: "Post not found");
+
+            if (post.Id != HttpContextHelper.UserId)
+                throw new StatusCodeException(HttpStatusCode.BadRequest, message: "must enter correct id");
 
             if (viewModel.Image is not null)
                 post.ImagePath = await _fileservice.SaveImageAsync(viewModel.Image);

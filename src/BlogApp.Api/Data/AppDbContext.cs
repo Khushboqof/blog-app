@@ -26,8 +26,5 @@ namespace BlogApp.Api.Data
                 .IsRequired(true)
                 .OnDelete(DeleteBehavior.Cascade);
         }
-
-
-
     }
 }
