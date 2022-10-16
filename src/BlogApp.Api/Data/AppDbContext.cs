@@ -18,6 +18,16 @@ namespace BlogApp.Api.Data
         {
             modelBuilder.Entity<User>().HasIndex(o => o.Email).IsUnique();
             modelBuilder.Entity<User>().HasIndex(o => o.Username).IsUnique();
+
+            modelBuilder.Entity<BlogPost>()
+                .HasOne<User>(s => s.User)
+                .WithMany(o => o.BlogPosts)
+                .HasForeignKey(o => o.UserId)   
+                .IsRequired(true)
+                .OnDelete(DeleteBehavior.Cascade);
         }
+
+       
+
     }
 }

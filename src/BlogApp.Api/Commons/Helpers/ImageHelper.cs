@@ -7,7 +7,7 @@
             string strpath = Path.GetExtension(filename);
 
             string guid = Guid.NewGuid().ToString();
-            return "IMG_" + guid + filename + strpath;
+            return "IMG_" + guid + strpath;
         }
     }
 }

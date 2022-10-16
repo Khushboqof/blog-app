@@ -98,18 +98,26 @@ namespace BlogApp.Api.Migrations
                     b.HasIndex("Email")
                         .IsUnique();
 
+                    b.HasIndex("Username")
+                        .IsUnique();
+
                     b.ToTable("Users");
                 });
 
             modelBuilder.Entity("BlogApp.Api.Entities.BlogPost", b =>
                 {
                     b.HasOne("BlogApp.Api.Entities.User", "User")
-                        .WithMany()
+                        .WithMany("BlogPosts")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("User");
+                });
+
+            modelBuilder.Entity("BlogApp.Api.Entities.User", b =>
+                {
+                    b.Navigation("BlogPosts");
                 });
 #pragma warning restore 612, 618
         }

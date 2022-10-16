@@ -49,8 +49,10 @@ namespace BlogApp.Api.Services
         public async Task<bool> RegistrAsync(UserCreateViewModel viewModel)
         {
             var userk = await _repositroy.GetAsync(o => o.Email == viewModel.Email);
+            var userkk = await _repositroy.GetAsync(o => o.Username == viewModel.Username);
 
-            if (userk is null)
+
+            if (userk is null && userkk is null)
             {
                 var user = (User)viewModel;
 
