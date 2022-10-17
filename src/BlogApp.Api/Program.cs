@@ -67,6 +67,8 @@ HttpContextHelper.Accessor = app.Services.GetRequiredService<IHttpContextAccesso
 
 app.UseMiddleware<ExceptionHandlerMiddlewar>();
 
+app.UseStaticFiles();
+
 app.UseHttpsRedirection();
 
 app.UseCors("AllowAll");

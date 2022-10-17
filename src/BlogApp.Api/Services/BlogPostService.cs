@@ -1,11 +1,9 @@
 ﻿using BlogApp.Api.Commons.Exceptions;
 using BlogApp.Api.Commons.Helpers;
 using BlogApp.Api.Entities;
-using BlogApp.Api.Enums;
 using BlogApp.Api.Inerfaces.Repositories;
 using BlogApp.Api.Inerfaces.Services;
 using BlogApp.Api.ViewModels.Blogs;
-using Flurl.Util;
 using System.Linq.Expressions;
 using System.Net;
 
@@ -83,6 +81,7 @@ namespace BlogApp.Api.Services
                     ViewCount = post.ViewCount,
                     CreatedAt = post.CreatedAt,
                     UpdatedAt = post.UpdatedAt
+                    
                 };
 
                 blogViews.Add(blogView);
@@ -109,7 +108,8 @@ namespace BlogApp.Api.Services
                     Username = user.Username,
                     ViewCount = post.ViewCount,
                     CreatedAt = post.CreatedAt,
-                    UpdatedAt = post.UpdatedAt
+                    UpdatedAt = post.UpdatedAt,
+                    ImageUrl = post.ImagePath
                 };
 
                 post.ViewCount++;
@@ -138,7 +138,7 @@ namespace BlogApp.Api.Services
 
             post.Title = viewModel.Title;
             post.Description = viewModel.Description;
-            post.UpdatedAt = DateTime.UtcNow;      
+            post.UpdatedAt = DateTime.UtcNow;
 
             var UpdatePost = await _blogAppRepository.UpdateAsync(post);
             await _blogAppRepository.SaveAsync();
