@@ -5831,3 +5831,515 @@ FROM "Users" AS u
 2022-10-18 17:34:34.663 +05:00 [INF] Executed action BlogApp.Api.Controllers.UsersController.GetAllAsync (BlogApp.Api) in 661.9779ms
 2022-10-18 17:34:34.663 +05:00 [INF] Executed endpoint 'BlogApp.Api.Controllers.UsersController.GetAllAsync (BlogApp.Api)'
 2022-10-18 17:34:34.664 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44380/api/users - - - 200 - application/json;+charset=utf-8 674.7562ms
+2022-10-18 19:00:35.864 +05:00 [INF] User profile is available. Using 'C:\Users\Elbek\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-10-18 19:00:37.433 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-10-18 19:00:37.476 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44380/swagger/index.html - -
+2022-10-18 19:00:37.939 +05:00 [INF] Hosting environment: Development
+2022-10-18 19:00:38.705 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44380/_framework/aspnetcore-browser-refresh.js - -
+2022-10-18 19:00:38.710 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44380/swagger/index.html - - - 200 - text/html;charset=utf-8 1237.9966ms
+2022-10-18 19:00:38.714 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44380/_vs/browserLink - -
+2022-10-18 19:00:39.627 +05:00 [INF] Content root path: C:\Users\Elbek\Desktop\blog-app\src\BlogApp.Api\
+2022-10-18 19:00:39.689 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44380/_framework/aspnetcore-browser-refresh.js - - - 200 11992 application/javascript;+charset=utf-8 984.7043ms
+2022-10-18 19:00:39.779 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44380/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 1065.4129ms
+2022-10-18 19:00:39.865 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44380/swagger/v1/swagger.json - -
+2022-10-18 19:00:40.771 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44380/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 906.6040ms
+2022-10-18 19:03:33.576 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44380/api/users/id - -
+2022-10-18 19:03:35.479 +05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2022-10-18 19:03:36.832 +05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2022-10-18 19:03:38.236 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44380/api/users/id - - - 401 - - 4659.9526ms
+2022-10-18 19:03:49.192 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44380/api/blogposts - -
+2022-10-18 19:03:50.855 +05:00 [INF] Executing endpoint 'BlogApp.Api.Controllers.BlogPostsController.GetAllAsync (BlogApp.Api)'
+2022-10-18 19:03:51.689 +05:00 [INF] Route matched with {action = "GetAll", controller = "BlogPosts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllAsync(BlogApp.Api.Commons.Helpers.PaginationParams) on controller BlogApp.Api.Controllers.BlogPostsController (BlogApp.Api).
+2022-10-18 19:03:54.135 +05:00 [INF] Entity Framework Core 6.0.9 initialized 'AppDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.7+5b98e4b74de93b590b44aef8dd7967c03acc433c' with options: NoTracking 
+2022-10-18 19:03:57.915 +05:00 [INF] Executed DbCommand (537ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)::INT
+FROM "BlogPosts" AS b
+2022-10-18 19:03:58.831 +05:00 [INF] Executed DbCommand (197ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT b."Id", b."CreatedAt", b."Description", b."ImagePath", b."Title", b."UpdatedAt", b."UserId", b."ViewCount"
+FROM "BlogPosts" AS b
+2022-10-18 19:04:00.021 +05:00 [INF] Executed DbCommand (280ms) [Parameters=[@__post_UserId_0='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."Email", u."FirstName", u."ImagePath", u."IsEmailConfirmed", u."LastName", u."PasswordHash", u."Salt", u."UserRole", u."Username"
+FROM "Users" AS u
+WHERE u."Id" = @__post_UserId_0
+LIMIT 1
+2022-10-18 19:04:00.590 +05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BlogApp.Api.ViewModels.Blogs.BlogViewModel, BlogApp.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-10-18 19:04:01.491 +05:00 [INF] Executed action BlogApp.Api.Controllers.BlogPostsController.GetAllAsync (BlogApp.Api) in 9093.1987ms
+2022-10-18 19:04:02.119 +05:00 [INF] Executed endpoint 'BlogApp.Api.Controllers.BlogPostsController.GetAllAsync (BlogApp.Api)'
+2022-10-18 19:04:02.672 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44380/api/blogposts - - - 200 - application/json;+charset=utf-8 13480.6018ms
+2022-10-18 19:06:28.173 +05:00 [INF] Request starting HTTP/2 POST https://localhost:44380/api/accounts/registr multipart/form-data;+boundary=----WebKitFormBoundaryFzNUGvG2aKTZRD0d 15157
+2022-10-18 19:06:28.985 +05:00 [INF] CORS policy execution successful.
+2022-10-18 19:06:30.185 +05:00 [INF] Executing endpoint 'BlogApp.Api.Controllers.AccountsController.RegistrAsync (BlogApp.Api)'
+2022-10-18 19:06:31.860 +05:00 [INF] Route matched with {action = "Registr", controller = "Accounts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RegistrAsync(BlogApp.Api.ViewModels.Users.UserCreateViewModel) on controller BlogApp.Api.Controllers.AccountsController (BlogApp.Api).
+2022-10-18 19:06:33.770 +05:00 [INF] Entity Framework Core 6.0.9 initialized 'AppDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.7+5b98e4b74de93b590b44aef8dd7967c03acc433c' with options: NoTracking 
+2022-10-18 19:07:09.534 +05:00 [ERR] Failed executing DbCommand (35,049ms) [Parameters=[@__viewModel_Email_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."Email", u."FirstName", u."ImagePath", u."IsEmailConfirmed", u."LastName", u."PasswordHash", u."Salt", u."UserRole", u."Username"
+FROM "Users" AS u
+WHERE u."Email" = @__viewModel_Email_0
+LIMIT 1
+2022-10-18 19:07:12.053 +05:00 [ERR] An exception occurred while iterating over the results of a query for context type 'BlogApp.Api.Data.AppDbContext'.
+System.InvalidOperationException: An exception has been raised that is likely due to a transient failure.
+ ---> Npgsql.NpgsqlException (0x80004005): Exception while reading from stream
+ ---> System.TimeoutException: Timeout during reading attempt
+   at Npgsql.Internal.NpgsqlReadBuffer.<Ensure>g__EnsureLong|41_0(NpgsqlReadBuffer buffer, Int32 count, Boolean async, Boolean readingNotifications)
+   at Npgsql.Internal.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|215_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.Internal.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|215_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.InvalidOperationException: An exception has been raised that is likely due to a transient failure.
+ ---> Npgsql.NpgsqlException (0x80004005): Exception while reading from stream
+ ---> System.TimeoutException: Timeout during reading attempt
+   at Npgsql.Internal.NpgsqlReadBuffer.<Ensure>g__EnsureLong|41_0(NpgsqlReadBuffer buffer, Int32 count, Boolean async, Boolean readingNotifications)
+   at Npgsql.Internal.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|215_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.Internal.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|215_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2022-10-18 19:07:13.092 +05:00 [INF] Executed action BlogApp.Api.Controllers.AccountsController.RegistrAsync (BlogApp.Api) in 39402.9657ms
+2022-10-18 19:07:15.044 +05:00 [INF] Executed endpoint 'BlogApp.Api.Controllers.AccountsController.RegistrAsync (BlogApp.Api)'
+2022-10-18 19:07:15.900 +05:00 [ERR] WebAPI Global Exception Handler
+System.InvalidOperationException: An exception has been raised that is likely due to a transient failure.
+ ---> Npgsql.NpgsqlException (0x80004005): Exception while reading from stream
+ ---> System.TimeoutException: Timeout during reading attempt
+   at Npgsql.Internal.NpgsqlReadBuffer.<Ensure>g__EnsureLong|41_0(NpgsqlReadBuffer buffer, Int32 count, Boolean async, Boolean readingNotifications)
+   at Npgsql.Internal.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|215_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.Internal.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|215_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at BlogApp.Api.Repositrories.UserRepositrory.GetAsync(Expression`1 expression) in C:\Users\Elbek\Desktop\blog-app\src\BlogApp.Api\Repositrories\UserRepositrory.cs:line 48
+   at BlogApp.Api.Services.AccountService.RegistrAsync(UserCreateViewModel viewModel) in C:\Users\Elbek\Desktop\blog-app\src\BlogApp.Api\Services\AccountService.cs:line 51
+   at BlogApp.Api.Controllers.AccountsController.RegistrAsync(UserCreateViewModel createViewModel) in C:\Users\Elbek\Desktop\blog-app\src\BlogApp.Api\Controllers\AccountsController.cs:line 22
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at BlogApp.Api.Commons.Middlewares.ExceptionHandlerMiddlewar.InvokeAsync(HttpContext httpContext) in C:\Users\Elbek\Desktop\blog-app\src\BlogApp.Api\Commons\Middlewares\ExceptionHandlerMiddlewar.cs:line 19
+2022-10-18 19:07:19.431 +05:00 [INF] Request finished HTTP/2 POST https://localhost:44380/api/accounts/registr multipart/form-data;+boundary=----WebKitFormBoundaryFzNUGvG2aKTZRD0d 15157 - 500 - application/json 51257.3650ms
+2022-10-18 19:07:38.005 +05:00 [INF] Request starting HTTP/2 POST https://localhost:44380/api/accounts/registr multipart/form-data;+boundary=----WebKitFormBoundarys5QGkhxvn0GoXxMS 15157
+2022-10-18 19:07:40.020 +05:00 [INF] CORS policy execution successful.
+2022-10-18 19:07:41.097 +05:00 [INF] Executing endpoint 'BlogApp.Api.Controllers.AccountsController.RegistrAsync (BlogApp.Api)'
+2022-10-18 19:07:42.480 +05:00 [INF] Route matched with {action = "Registr", controller = "Accounts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RegistrAsync(BlogApp.Api.ViewModels.Users.UserCreateViewModel) on controller BlogApp.Api.Controllers.AccountsController (BlogApp.Api).
+2022-10-18 19:07:43.793 +05:00 [INF] Entity Framework Core 6.0.9 initialized 'AppDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.7+5b98e4b74de93b590b44aef8dd7967c03acc433c' with options: NoTracking 
+2022-10-18 19:07:50.358 +05:00 [INF] Executed DbCommand (491ms) [Parameters=[@__viewModel_Email_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."Email", u."FirstName", u."ImagePath", u."IsEmailConfirmed", u."LastName", u."PasswordHash", u."Salt", u."UserRole", u."Username"
+FROM "Users" AS u
+WHERE u."Email" = @__viewModel_Email_0
+LIMIT 1
+2022-10-18 19:07:56.030 +05:00 [INF] Executed DbCommand (2,435ms) [Parameters=[@__viewModel_Username_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."Email", u."FirstName", u."ImagePath", u."IsEmailConfirmed", u."LastName", u."PasswordHash", u."Salt", u."UserRole", u."Username"
+FROM "Users" AS u
+WHERE u."Username" = @__viewModel_Username_0
+LIMIT 1
+2022-10-18 19:07:59.596 +05:00 [INF] Executed DbCommand (512ms) [Parameters=[@p0='?', @p1='?', @p2='?', @p3='?' (DbType = Boolean), @p4='?', @p5='?', @p6='?', @p7='?' (DbType = Int32), @p8='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Users" ("Email", "FirstName", "ImagePath", "IsEmailConfirmed", "LastName", "PasswordHash", "Salt", "UserRole", "Username")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8)
+RETURNING "Id";
+2022-10-18 19:08:08.035 +05:00 [INF] Executing OkObjectResult, writing value of type 'System.Boolean'.
+2022-10-18 19:08:08.845 +05:00 [INF] Executed action BlogApp.Api.Controllers.AccountsController.RegistrAsync (BlogApp.Api) in 25067.5956ms
+2022-10-18 19:08:12.505 +05:00 [INF] Executed endpoint 'BlogApp.Api.Controllers.AccountsController.RegistrAsync (BlogApp.Api)'
+2022-10-18 19:08:16.253 +05:00 [INF] Request finished HTTP/2 POST https://localhost:44380/api/accounts/registr multipart/form-data;+boundary=----WebKitFormBoundarys5QGkhxvn0GoXxMS 15157 - 200 - application/json;+charset=utf-8 38248.2023ms
+2022-10-18 19:10:13.213 +05:00 [INF] Request starting HTTP/2 POST https://localhost:44380/api/accounts/verifyemail application/json 58
+2022-10-18 19:10:14.230 +05:00 [INF] CORS policy execution successful.
+2022-10-18 19:10:16.477 +05:00 [INF] Executing endpoint 'BlogApp.Api.Controllers.AccountsController.VerifyEmail (BlogApp.Api)'
+2022-10-18 19:10:19.047 +05:00 [INF] Route matched with {action = "VerifyEmail", controller = "Accounts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] VerifyEmail(BlogApp.Api.ViewModels.Users.EmailVerify) on controller BlogApp.Api.Controllers.AccountsController (BlogApp.Api).
+2022-10-18 19:10:24.099 +05:00 [INF] Entity Framework Core 6.0.9 initialized 'AppDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.7+5b98e4b74de93b590b44aef8dd7967c03acc433c' with options: NoTracking 
+2022-10-18 19:11:03.351 +05:00 [ERR] Failed executing DbCommand (37,522ms) [Parameters=[@__emailVerify_Email_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."Email", u."FirstName", u."ImagePath", u."IsEmailConfirmed", u."LastName", u."PasswordHash", u."Salt", u."UserRole", u."Username"
+FROM "Users" AS u
+WHERE u."Email" = @__emailVerify_Email_0
+LIMIT 1
+2022-10-18 19:11:04.532 +05:00 [ERR] An exception occurred while iterating over the results of a query for context type 'BlogApp.Api.Data.AppDbContext'.
+System.InvalidOperationException: An exception has been raised that is likely due to a transient failure.
+ ---> Npgsql.NpgsqlException (0x80004005): Exception while reading from stream
+ ---> System.TimeoutException: Timeout during reading attempt
+   at Npgsql.Internal.NpgsqlReadBuffer.<Ensure>g__EnsureLong|41_0(NpgsqlReadBuffer buffer, Int32 count, Boolean async, Boolean readingNotifications)
+   at Npgsql.Internal.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|215_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.Internal.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|215_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.InvalidOperationException: An exception has been raised that is likely due to a transient failure.
+ ---> Npgsql.NpgsqlException (0x80004005): Exception while reading from stream
+ ---> System.TimeoutException: Timeout during reading attempt
+   at Npgsql.Internal.NpgsqlReadBuffer.<Ensure>g__EnsureLong|41_0(NpgsqlReadBuffer buffer, Int32 count, Boolean async, Boolean readingNotifications)
+   at Npgsql.Internal.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|215_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.Internal.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|215_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2022-10-18 19:11:06.321 +05:00 [INF] Executed action BlogApp.Api.Controllers.AccountsController.VerifyEmail (BlogApp.Api) in 42227.7936ms
+2022-10-18 19:11:07.370 +05:00 [INF] Executed endpoint 'BlogApp.Api.Controllers.AccountsController.VerifyEmail (BlogApp.Api)'
+2022-10-18 19:11:08.407 +05:00 [ERR] WebAPI Global Exception Handler
+System.InvalidOperationException: An exception has been raised that is likely due to a transient failure.
+ ---> Npgsql.NpgsqlException (0x80004005): Exception while reading from stream
+ ---> System.TimeoutException: Timeout during reading attempt
+   at Npgsql.Internal.NpgsqlReadBuffer.<Ensure>g__EnsureLong|41_0(NpgsqlReadBuffer buffer, Int32 count, Boolean async, Boolean readingNotifications)
+   at Npgsql.Internal.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|215_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.Internal.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|215_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at BlogApp.Api.Repositrories.UserRepositrory.GetAsync(Expression`1 expression) in C:\Users\Elbek\Desktop\blog-app\src\BlogApp.Api\Repositrories\UserRepositrory.cs:line 48
+   at BlogApp.Api.Services.AccountService.VerifyEmail(EmailVerify emailVerify) in C:\Users\Elbek\Desktop\blog-app\src\BlogApp.Api\Services\AccountService.cs:line 104
+   at BlogApp.Api.Controllers.AccountsController.VerifyEmail(EmailVerify email) in C:\Users\Elbek\Desktop\blog-app\src\BlogApp.Api\Controllers\AccountsController.cs:line 32
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at BlogApp.Api.Commons.Middlewares.ExceptionHandlerMiddlewar.InvokeAsync(HttpContext httpContext) in C:\Users\Elbek\Desktop\blog-app\src\BlogApp.Api\Commons\Middlewares\ExceptionHandlerMiddlewar.cs:line 19
+2022-10-18 19:11:12.031 +05:00 [INF] Request finished HTTP/2 POST https://localhost:44380/api/accounts/verifyemail application/json 58 - 500 - application/json 58818.1805ms
+2022-10-18 19:11:46.347 +05:00 [INF] Request starting HTTP/2 POST https://localhost:44380/api/accounts/verifyemail application/json 58
+2022-10-18 19:11:47.292 +05:00 [INF] CORS policy execution successful.
+2022-10-18 19:11:48.739 +05:00 [INF] Executing endpoint 'BlogApp.Api.Controllers.AccountsController.VerifyEmail (BlogApp.Api)'
+2022-10-18 19:11:50.058 +05:00 [INF] Route matched with {action = "VerifyEmail", controller = "Accounts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] VerifyEmail(BlogApp.Api.ViewModels.Users.EmailVerify) on controller BlogApp.Api.Controllers.AccountsController (BlogApp.Api).
+2022-10-18 19:11:50.688 +05:00 [INF] Entity Framework Core 6.0.9 initialized 'AppDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.7+5b98e4b74de93b590b44aef8dd7967c03acc433c' with options: NoTracking 
+2022-10-18 19:11:56.054 +05:00 [INF] Executed DbCommand (261ms) [Parameters=[@__emailVerify_Email_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."Email", u."FirstName", u."ImagePath", u."IsEmailConfirmed", u."LastName", u."PasswordHash", u."Salt", u."UserRole", u."Username"
+FROM "Users" AS u
+WHERE u."Email" = @__emailVerify_Email_0
+LIMIT 1
+2022-10-18 19:11:57.702 +05:00 [INF] Executed DbCommand (239ms) [Parameters=[@p9='?' (DbType = Int64), @p0='?', @p1='?', @p2='?', @p3='?' (DbType = Boolean), @p4='?', @p5='?', @p6='?', @p7='?' (DbType = Int32), @p8='?'], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Users" SET "Email" = @p0, "FirstName" = @p1, "ImagePath" = @p2, "IsEmailConfirmed" = @p3, "LastName" = @p4, "PasswordHash" = @p5, "Salt" = @p6, "UserRole" = @p7, "Username" = @p8
+WHERE "Id" = @p9;
+2022-10-18 19:11:59.082 +05:00 [INF] Executing OkObjectResult, writing value of type 'System.Boolean'.
+2022-10-18 19:12:00.015 +05:00 [INF] Executed action BlogApp.Api.Controllers.AccountsController.VerifyEmail (BlogApp.Api) in 9327.8417ms
+2022-10-18 19:12:01.132 +05:00 [INF] Executed endpoint 'BlogApp.Api.Controllers.AccountsController.VerifyEmail (BlogApp.Api)'
+2022-10-18 19:12:02.290 +05:00 [INF] Request finished HTTP/2 POST https://localhost:44380/api/accounts/verifyemail application/json 58 - 200 - application/json;+charset=utf-8 15942.5898ms
+2022-10-18 19:12:27.714 +05:00 [INF] Request starting HTTP/2 POST https://localhost:44380/api/accounts/login multipart/form-data;+boundary=----WebKitFormBoundaryW8AYA1KkXNhFU40q 264
+2022-10-18 19:12:29.284 +05:00 [INF] CORS policy execution successful.
+2022-10-18 19:12:30.938 +05:00 [INF] Executing endpoint 'BlogApp.Api.Controllers.AccountsController.LogInAsync (BlogApp.Api)'
+2022-10-18 19:12:32.078 +05:00 [INF] Route matched with {action = "LogIn", controller = "Accounts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LogInAsync(BlogApp.Api.ViewModels.Users.UserLoginViewModel) on controller BlogApp.Api.Controllers.AccountsController (BlogApp.Api).
+2022-10-18 19:12:32.877 +05:00 [INF] Entity Framework Core 6.0.9 initialized 'AppDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.7+5b98e4b74de93b590b44aef8dd7967c03acc433c' with options: NoTracking 
+2022-10-18 19:13:07.918 +05:00 [ERR] Failed executing DbCommand (30,013ms) [Parameters=[@__viewModel_Email_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."Email", u."FirstName", u."ImagePath", u."IsEmailConfirmed", u."LastName", u."PasswordHash", u."Salt", u."UserRole", u."Username"
+FROM "Users" AS u
+WHERE u."Email" = @__viewModel_Email_0
+LIMIT 1
+2022-10-18 19:13:07.932 +05:00 [ERR] An exception occurred while iterating over the results of a query for context type 'BlogApp.Api.Data.AppDbContext'.
+System.InvalidOperationException: An exception has been raised that is likely due to a transient failure.
+ ---> Npgsql.NpgsqlException (0x80004005): Exception while reading from stream
+ ---> System.TimeoutException: Timeout during reading attempt
+   at Npgsql.Internal.NpgsqlReadBuffer.<Ensure>g__EnsureLong|41_0(NpgsqlReadBuffer buffer, Int32 count, Boolean async, Boolean readingNotifications)
+   at Npgsql.Internal.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|215_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.Internal.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|215_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.InvalidOperationException: An exception has been raised that is likely due to a transient failure.
+ ---> Npgsql.NpgsqlException (0x80004005): Exception while reading from stream
+ ---> System.TimeoutException: Timeout during reading attempt
+   at Npgsql.Internal.NpgsqlReadBuffer.<Ensure>g__EnsureLong|41_0(NpgsqlReadBuffer buffer, Int32 count, Boolean async, Boolean readingNotifications)
+   at Npgsql.Internal.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|215_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.Internal.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|215_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2022-10-18 19:13:07.941 +05:00 [INF] Executed action BlogApp.Api.Controllers.AccountsController.LogInAsync (BlogApp.Api) in 35066.1961ms
+2022-10-18 19:13:07.946 +05:00 [INF] Executed endpoint 'BlogApp.Api.Controllers.AccountsController.LogInAsync (BlogApp.Api)'
+2022-10-18 19:13:07.949 +05:00 [ERR] WebAPI Global Exception Handler
+System.InvalidOperationException: An exception has been raised that is likely due to a transient failure.
+ ---> Npgsql.NpgsqlException (0x80004005): Exception while reading from stream
+ ---> System.TimeoutException: Timeout during reading attempt
+   at Npgsql.Internal.NpgsqlReadBuffer.<Ensure>g__EnsureLong|41_0(NpgsqlReadBuffer buffer, Int32 count, Boolean async, Boolean readingNotifications)
+   at Npgsql.Internal.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|215_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.Internal.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|215_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at BlogApp.Api.Repositrories.UserRepositrory.GetAsync(Expression`1 expression) in C:\Users\Elbek\Desktop\blog-app\src\BlogApp.Api\Repositrories\UserRepositrory.cs:line 48
+   at BlogApp.Api.Services.AccountService.LogInAsync(UserLoginViewModel viewModel) in C:\Users\Elbek\Desktop\blog-app\src\BlogApp.Api\Services\AccountService.cs:line 33
+   at BlogApp.Api.Controllers.AccountsController.LogInAsync(UserLoginViewModel viewModel) in C:\Users\Elbek\Desktop\blog-app\src\BlogApp.Api\Controllers\AccountsController.cs:line 28
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at BlogApp.Api.Commons.Middlewares.ExceptionHandlerMiddlewar.InvokeAsync(HttpContext httpContext) in C:\Users\Elbek\Desktop\blog-app\src\BlogApp.Api\Commons\Middlewares\ExceptionHandlerMiddlewar.cs:line 19
+2022-10-18 19:13:07.960 +05:00 [INF] Request finished HTTP/2 POST https://localhost:44380/api/accounts/login multipart/form-data;+boundary=----WebKitFormBoundaryW8AYA1KkXNhFU40q 264 - 500 - application/json 40246.3867ms
+2022-10-18 19:13:13.271 +05:00 [INF] Request starting HTTP/2 POST https://localhost:44380/api/accounts/login multipart/form-data;+boundary=----WebKitFormBoundaryg2uI5FKnQTDCR1wI 264
+2022-10-18 19:13:13.275 +05:00 [INF] CORS policy execution successful.
+2022-10-18 19:13:13.280 +05:00 [INF] Executing endpoint 'BlogApp.Api.Controllers.AccountsController.LogInAsync (BlogApp.Api)'
+2022-10-18 19:13:13.283 +05:00 [INF] Route matched with {action = "LogIn", controller = "Accounts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LogInAsync(BlogApp.Api.ViewModels.Users.UserLoginViewModel) on controller BlogApp.Api.Controllers.AccountsController (BlogApp.Api).
+2022-10-18 19:13:13.288 +05:00 [INF] Entity Framework Core 6.0.9 initialized 'AppDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.7+5b98e4b74de93b590b44aef8dd7967c03acc433c' with options: NoTracking 
+2022-10-18 19:13:13.301 +05:00 [ERR] An error occurred using the connection to database 'dbt8kjcjvea7rb' on server ''.
+2022-10-18 19:13:13.315 +05:00 [ERR] An exception occurred while iterating over the results of a query for context type 'BlogApp.Api.Data.AppDbContext'.
+System.Net.Sockets.SocketException (11001): No such host is known.
+   at System.Net.NameResolutionPal.ProcessResult(SocketError errorCode, GetAddrInfoExContext* context)
+   at System.Net.NameResolutionPal.GetAddressInfoExCallback(Int32 error, Int32 bytes, NativeOverlapped* overlapped)
+--- End of stack trace from previous location ---
+   at Npgsql.TaskExtensions.ExecuteWithTimeout[TResult](Func`2 func, NpgsqlTimeout timeout, CancellationToken cancellationToken)
+   at Npgsql.TaskExtensions.WithCancellation[T](Task`1 task, CancellationToken cancellationToken)
+   at Npgsql.TaskExtensions.WithTimeout[T](Task`1 task, NpgsqlTimeout timeout)
+   at Npgsql.Internal.NpgsqlConnector.ConnectAsync(NpgsqlTimeout timeout, CancellationToken cancellationToken)
+   at Npgsql.Internal.NpgsqlConnector.RawOpen(SslMode sslMode, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken, Boolean isFirstAttempt)
+   at Npgsql.Internal.NpgsqlConnector.<Open>g__OpenCore|195_1(NpgsqlConnector conn, SslMode sslMode, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken, Boolean isFirstAttempt)
+   at Npgsql.Internal.NpgsqlConnector.Open(NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.ConnectorPool.OpenNewConnector(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.ConnectorPool.<Get>g__RentAsync|28_0(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlConnection.<Open>g__OpenAsync|45_0(Boolean async, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.Net.Sockets.SocketException (11001): No such host is known.
+   at System.Net.NameResolutionPal.ProcessResult(SocketError errorCode, GetAddrInfoExContext* context)
+   at System.Net.NameResolutionPal.GetAddressInfoExCallback(Int32 error, Int32 bytes, NativeOverlapped* overlapped)
+--- End of stack trace from previous location ---
+   at Npgsql.TaskExtensions.ExecuteWithTimeout[TResult](Func`2 func, NpgsqlTimeout timeout, CancellationToken cancellationToken)
+   at Npgsql.TaskExtensions.WithCancellation[T](Task`1 task, CancellationToken cancellationToken)
+   at Npgsql.TaskExtensions.WithTimeout[T](Task`1 task, NpgsqlTimeout timeout)
+   at Npgsql.Internal.NpgsqlConnector.ConnectAsync(NpgsqlTimeout timeout, CancellationToken cancellationToken)
+   at Npgsql.Internal.NpgsqlConnector.RawOpen(SslMode sslMode, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken, Boolean isFirstAttempt)
+   at Npgsql.Internal.NpgsqlConnector.<Open>g__OpenCore|195_1(NpgsqlConnector conn, SslMode sslMode, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken, Boolean isFirstAttempt)
+   at Npgsql.Internal.NpgsqlConnector.Open(NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.ConnectorPool.OpenNewConnector(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.ConnectorPool.<Get>g__RentAsync|28_0(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlConnection.<Open>g__OpenAsync|45_0(Boolean async, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2022-10-18 19:13:13.325 +05:00 [INF] Executed action BlogApp.Api.Controllers.AccountsController.LogInAsync (BlogApp.Api) in 38.0008ms
+2022-10-18 19:13:13.329 +05:00 [INF] Executed endpoint 'BlogApp.Api.Controllers.AccountsController.LogInAsync (BlogApp.Api)'
+2022-10-18 19:13:13.331 +05:00 [ERR] WebAPI Global Exception Handler
+System.Net.Sockets.SocketException (11001): No such host is known.
+   at System.Net.NameResolutionPal.ProcessResult(SocketError errorCode, GetAddrInfoExContext* context)
+   at System.Net.NameResolutionPal.GetAddressInfoExCallback(Int32 error, Int32 bytes, NativeOverlapped* overlapped)
+--- End of stack trace from previous location ---
+   at Npgsql.TaskExtensions.ExecuteWithTimeout[TResult](Func`2 func, NpgsqlTimeout timeout, CancellationToken cancellationToken)
+   at Npgsql.TaskExtensions.WithCancellation[T](Task`1 task, CancellationToken cancellationToken)
+   at Npgsql.TaskExtensions.WithTimeout[T](Task`1 task, NpgsqlTimeout timeout)
+   at Npgsql.Internal.NpgsqlConnector.ConnectAsync(NpgsqlTimeout timeout, CancellationToken cancellationToken)
+   at Npgsql.Internal.NpgsqlConnector.RawOpen(SslMode sslMode, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken, Boolean isFirstAttempt)
+   at Npgsql.Internal.NpgsqlConnector.<Open>g__OpenCore|195_1(NpgsqlConnector conn, SslMode sslMode, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken, Boolean isFirstAttempt)
+   at Npgsql.Internal.NpgsqlConnector.Open(NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.ConnectorPool.OpenNewConnector(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.ConnectorPool.<Get>g__RentAsync|28_0(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlConnection.<Open>g__OpenAsync|45_0(Boolean async, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at BlogApp.Api.Repositrories.UserRepositrory.GetAsync(Expression`1 expression) in C:\Users\Elbek\Desktop\blog-app\src\BlogApp.Api\Repositrories\UserRepositrory.cs:line 48
+   at BlogApp.Api.Services.AccountService.LogInAsync(UserLoginViewModel viewModel) in C:\Users\Elbek\Desktop\blog-app\src\BlogApp.Api\Services\AccountService.cs:line 33
+   at BlogApp.Api.Controllers.AccountsController.LogInAsync(UserLoginViewModel viewModel) in C:\Users\Elbek\Desktop\blog-app\src\BlogApp.Api\Controllers\AccountsController.cs:line 28
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at BlogApp.Api.Commons.Middlewares.ExceptionHandlerMiddlewar.InvokeAsync(HttpContext httpContext) in C:\Users\Elbek\Desktop\blog-app\src\BlogApp.Api\Commons\Middlewares\ExceptionHandlerMiddlewar.cs:line 19
+2022-10-18 19:13:13.344 +05:00 [INF] Request finished HTTP/2 POST https://localhost:44380/api/accounts/login multipart/form-data;+boundary=----WebKitFormBoundaryg2uI5FKnQTDCR1wI 264 - 500 - application/json 72.7293ms
+2022-10-18 19:13:15.680 +05:00 [INF] Request starting HTTP/2 POST https://localhost:44380/api/accounts/login multipart/form-data;+boundary=----WebKitFormBoundarypQmuvg9wE7jvACnB 264
+2022-10-18 19:13:15.683 +05:00 [INF] CORS policy execution successful.
+2022-10-18 19:13:15.686 +05:00 [INF] Executing endpoint 'BlogApp.Api.Controllers.AccountsController.LogInAsync (BlogApp.Api)'
+2022-10-18 19:13:15.689 +05:00 [INF] Route matched with {action = "LogIn", controller = "Accounts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LogInAsync(BlogApp.Api.ViewModels.Users.UserLoginViewModel) on controller BlogApp.Api.Controllers.AccountsController (BlogApp.Api).
+2022-10-18 19:13:15.697 +05:00 [INF] Entity Framework Core 6.0.9 initialized 'AppDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.7+5b98e4b74de93b590b44aef8dd7967c03acc433c' with options: NoTracking 
+2022-10-18 19:13:15.704 +05:00 [ERR] An error occurred using the connection to database 'dbt8kjcjvea7rb' on server ''.
+2022-10-18 19:13:15.713 +05:00 [ERR] An exception occurred while iterating over the results of a query for context type 'BlogApp.Api.Data.AppDbContext'.
+System.Net.Sockets.SocketException (11001): No such host is known.
+   at System.Net.NameResolutionPal.ProcessResult(SocketError errorCode, GetAddrInfoExContext* context)
+   at System.Net.NameResolutionPal.GetAddressInfoExCallback(Int32 error, Int32 bytes, NativeOverlapped* overlapped)
+--- End of stack trace from previous location ---
+   at Npgsql.TaskExtensions.ExecuteWithTimeout[TResult](Func`2 func, NpgsqlTimeout timeout, CancellationToken cancellationToken)
+   at Npgsql.TaskExtensions.WithCancellation[T](Task`1 task, CancellationToken cancellationToken)
+   at Npgsql.TaskExtensions.WithTimeout[T](Task`1 task, NpgsqlTimeout timeout)
+   at Npgsql.Internal.NpgsqlConnector.ConnectAsync(NpgsqlTimeout timeout, CancellationToken cancellationToken)
+   at Npgsql.Internal.NpgsqlConnector.RawOpen(SslMode sslMode, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken, Boolean isFirstAttempt)
+   at Npgsql.Internal.NpgsqlConnector.<Open>g__OpenCore|195_1(NpgsqlConnector conn, SslMode sslMode, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken, Boolean isFirstAttempt)
+   at Npgsql.Internal.NpgsqlConnector.Open(NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.ConnectorPool.OpenNewConnector(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.ConnectorPool.<Get>g__RentAsync|28_0(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlConnection.<Open>g__OpenAsync|45_0(Boolean async, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.Net.Sockets.SocketException (11001): No such host is known.
+   at System.Net.NameResolutionPal.ProcessResult(SocketError errorCode, GetAddrInfoExContext* context)
+   at System.Net.NameResolutionPal.GetAddressInfoExCallback(Int32 error, Int32 bytes, NativeOverlapped* overlapped)
+--- End of stack trace from previous location ---
+   at Npgsql.TaskExtensions.ExecuteWithTimeout[TResult](Func`2 func, NpgsqlTimeout timeout, CancellationToken cancellationToken)
+   at Npgsql.TaskExtensions.WithCancellation[T](Task`1 task, CancellationToken cancellationToken)
+   at Npgsql.TaskExtensions.WithTimeout[T](Task`1 task, NpgsqlTimeout timeout)
+   at Npgsql.Internal.NpgsqlConnector.ConnectAsync(NpgsqlTimeout timeout, CancellationToken cancellationToken)
+   at Npgsql.Internal.NpgsqlConnector.RawOpen(SslMode sslMode, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken, Boolean isFirstAttempt)
+   at Npgsql.Internal.NpgsqlConnector.<Open>g__OpenCore|195_1(NpgsqlConnector conn, SslMode sslMode, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken, Boolean isFirstAttempt)
+   at Npgsql.Internal.NpgsqlConnector.Open(NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.ConnectorPool.OpenNewConnector(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.ConnectorPool.<Get>g__RentAsync|28_0(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlConnection.<Open>g__OpenAsync|45_0(Boolean async, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2022-10-18 19:13:15.719 +05:00 [INF] Executed action BlogApp.Api.Controllers.AccountsController.LogInAsync (BlogApp.Api) in 23.3399ms
+2022-10-18 19:13:15.722 +05:00 [INF] Executed endpoint 'BlogApp.Api.Controllers.AccountsController.LogInAsync (BlogApp.Api)'
+2022-10-18 19:13:15.727 +05:00 [ERR] WebAPI Global Exception Handler
+System.Net.Sockets.SocketException (11001): No such host is known.
+   at System.Net.NameResolutionPal.ProcessResult(SocketError errorCode, GetAddrInfoExContext* context)
+   at System.Net.NameResolutionPal.GetAddressInfoExCallback(Int32 error, Int32 bytes, NativeOverlapped* overlapped)
+--- End of stack trace from previous location ---
+   at Npgsql.TaskExtensions.ExecuteWithTimeout[TResult](Func`2 func, NpgsqlTimeout timeout, CancellationToken cancellationToken)
+   at Npgsql.TaskExtensions.WithCancellation[T](Task`1 task, CancellationToken cancellationToken)
+   at Npgsql.TaskExtensions.WithTimeout[T](Task`1 task, NpgsqlTimeout timeout)
+   at Npgsql.Internal.NpgsqlConnector.ConnectAsync(NpgsqlTimeout timeout, CancellationToken cancellationToken)
+   at Npgsql.Internal.NpgsqlConnector.RawOpen(SslMode sslMode, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken, Boolean isFirstAttempt)
+   at Npgsql.Internal.NpgsqlConnector.<Open>g__OpenCore|195_1(NpgsqlConnector conn, SslMode sslMode, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken, Boolean isFirstAttempt)
+   at Npgsql.Internal.NpgsqlConnector.Open(NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.ConnectorPool.OpenNewConnector(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.ConnectorPool.<Get>g__RentAsync|28_0(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlConnection.<Open>g__OpenAsync|45_0(Boolean async, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at BlogApp.Api.Repositrories.UserRepositrory.GetAsync(Expression`1 expression) in C:\Users\Elbek\Desktop\blog-app\src\BlogApp.Api\Repositrories\UserRepositrory.cs:line 48
+   at BlogApp.Api.Services.AccountService.LogInAsync(UserLoginViewModel viewModel) in C:\Users\Elbek\Desktop\blog-app\src\BlogApp.Api\Services\AccountService.cs:line 33
+   at BlogApp.Api.Controllers.AccountsController.LogInAsync(UserLoginViewModel viewModel) in C:\Users\Elbek\Desktop\blog-app\src\BlogApp.Api\Controllers\AccountsController.cs:line 28
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at BlogApp.Api.Commons.Middlewares.ExceptionHandlerMiddlewar.InvokeAsync(HttpContext httpContext) in C:\Users\Elbek\Desktop\blog-app\src\BlogApp.Api\Commons\Middlewares\ExceptionHandlerMiddlewar.cs:line 19
+2022-10-18 19:13:15.736 +05:00 [INF] Request finished HTTP/2 POST https://localhost:44380/api/accounts/login multipart/form-data;+boundary=----WebKitFormBoundarypQmuvg9wE7jvACnB 264 - 500 - application/json 55.9964ms
