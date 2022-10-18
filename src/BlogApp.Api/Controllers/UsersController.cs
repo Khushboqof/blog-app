@@ -20,7 +20,7 @@ namespace BlogApp.Api.Controllers
             _blogPostService = blogPostService;
         }
 
-        [HttpGet, Authorize]
+        [HttpGet("{id}"), Authorize]
         public async Task<IActionResult> GetAsync()
             => Ok(await _userService.GetAsync(user => user.Id == HttpContextHelper.UserId));
 
