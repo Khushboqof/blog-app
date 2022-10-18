@@ -28,7 +28,7 @@ namespace BlogApp.Api.ViewModels.Users
                 Username = user.Username,
                 IsEmailConfirmed = user.IsEmailConfirmed,
                 Email = user.Email,
-                ImageUrl = user.ImagePath
+                ImageUrl = ("https://blog-app-management.herokuapp.com//" + user.ImagePath)
             };
         }
     }

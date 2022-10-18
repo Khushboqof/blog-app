@@ -29,7 +29,7 @@ namespace BlogApp.Api.ViewModels.Blogs
                 CreatedAt = blog.CreatedAt,
                 UpdatedAt = blog.UpdatedAt,
                 ViewCount = blog.ViewCount,
-                ImageUrl = blog.ImagePath
+                ImageUrl = "https://blog-app-management.herokuapp.com//" + blog.ImagePath
             };
         }
     }

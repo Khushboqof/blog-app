@@ -77,11 +77,10 @@ namespace BlogApp.Api.Services
                     Title = post.Title,
                     Description = post.Description,
                     Username = user.Username,
-                    ImageUrl = post.ImagePath,
+                    ImageUrl = "https://blog-app-management.herokuapp.com//" + post.ImagePath,
                     ViewCount = post.ViewCount,
                     CreatedAt = post.CreatedAt,
-                    UpdatedAt = post.UpdatedAt
-                    
+                    UpdatedAt = post.UpdatedAt,
                 };
 
                 blogViews.Add(blogView);
@@ -109,7 +108,7 @@ namespace BlogApp.Api.Services
                     ViewCount = post.ViewCount,
                     CreatedAt = post.CreatedAt,
                     UpdatedAt = post.UpdatedAt,
-                    ImageUrl = post.ImagePath
+                    ImageUrl = "https://blog-app-management.herokuapp.com//" + post.ImagePath
                 };
 
                 post.ViewCount++;
