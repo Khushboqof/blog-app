@@ -22,6 +22,7 @@
     <PackageReference Include="Serilog.Sinks.File" Version="5.0.0" />
     <PackageReference Include="Serilog.Sinks.Telegram" Version="0.2.1" />
     <PackageReference Include="Serilog.Sinks.Telegram.Alternative" Version="1.1.9" />
+    <PackageReference Include="Serilog.Sinks.TelegramBot" Version="1.0.9" />
     <PackageReference Include="SpecFlow" Version="3.9.74" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
     <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.23.1" />

@@ -15,23 +15,39 @@ namespace BlogApp.Api.Services
             {
                 Directory.CreateDirectory(_basePath);
             }
+            string imagepath = Path.Combine(_basePath, _imageFolderName);
+            if (!Directory.Exists(imagepath))
+            {
+                Directory.CreateDirectory(imagepath);
+            }
         }
 
         public async Task<string> SaveImageAsync(IFormFile file)
         {
             string fileName = ImageHelper.MakeImageName(file.FileName);
             string partPath = Path.Combine(_imageFolderName, fileName);
-
-            if(!Directory.Exists(Path.Combine(_basePath, _imageFolderName)))
-            {
-                Directory.CreateDirectory(Path.Combine(_basePath, _imageFolderName));
-            }
             string path = Path.Combine(_basePath, partPath);
 
             var stream = File.Create(path);
             await file.CopyToAsync(stream);
             return partPath;
+        }
 
+        public Task<bool> DeleteImageAsync(string relativeImagePath)
+        {
+            string absoluteFilePath = Path.Combine(_basePath, relativeImagePath);
+
+            if(!File.Exists(absoluteFilePath)) return Task.FromResult(false);
+
+            try
+            {
+                File.Delete(absoluteFilePath);
+                return Task.FromResult(true);
+            }
+            catch
+            {
+                return Task.FromResult(false);  
+            }
         }
     }
 }
