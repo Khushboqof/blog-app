@@ -1,4 +1,5 @@
 ﻿using BlogApp.Api.Commons.Helpers;
+using BlogApp.Api.Entities;
 using BlogApp.Api.Inerfaces.Services;
 using BlogApp.Api.ViewModels.Users;
 using Microsoft.AspNetCore.Authorization;
@@ -20,8 +21,8 @@ namespace BlogApp.Api.Controllers
         }
 
         [HttpGet("{id}"), Authorize]
-        public async Task<IActionResult> GetAsync(long id)
-            => Ok(await _userService.GetAsync(o => o.Id == id));
+        public async Task<IActionResult> GetAsync()
+            => Ok(await _userService.GetAsync(user => user.Id == HttpContextHelper.UserId));
 
         [HttpDelete("{id}"), Authorize]
         public async Task<IActionResult> DeleteAsync(long id)
