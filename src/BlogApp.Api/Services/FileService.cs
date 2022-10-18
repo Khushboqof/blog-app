@@ -15,17 +15,17 @@ namespace BlogApp.Api.Services
             {
                 Directory.CreateDirectory(_basePath);
             }
-            string imagepath = Path.Combine(_basePath, _imageFolderName);
-            if (!Directory.Exists(imagepath))
-            {
-                Directory.CreateDirectory(imagepath);
-            }
         }
 
         public async Task<string> SaveImageAsync(IFormFile file)
         {
             string fileName = ImageHelper.MakeImageName(file.FileName);
             string partPath = Path.Combine(_imageFolderName, fileName);
+
+            if(!Directory.Exists(Path.Combine(_basePath, _imageFolderName)))
+            {
+                Directory.CreateDirectory(Path.Combine(_basePath, _imageFolderName));
+            }
             string path = Path.Combine(_basePath, partPath);
 
             var stream = File.Create(path);
