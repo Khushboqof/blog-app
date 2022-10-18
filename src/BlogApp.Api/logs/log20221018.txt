@@ -5782,3 +5782,52 @@ WHERE "Id" = @p7;
 2022-10-18 16:56:06.474 +05:00 [INF] Executed action BlogApp.Api.Controllers.BlogPostsController.GetAsync (BlogApp.Api) in 786.8516ms
 2022-10-18 16:56:06.474 +05:00 [INF] Executed endpoint 'BlogApp.Api.Controllers.BlogPostsController.GetAsync (BlogApp.Api)'
 2022-10-18 16:56:06.475 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44380/api/blogposts/65 - - - 200 - application/json;+charset=utf-8 794.5472ms
+2022-10-18 17:33:41.850 +05:00 [INF] User profile is available. Using 'C:\Users\Elbek\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-10-18 17:33:42.239 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-10-18 17:33:42.239 +05:00 [INF] Hosting environment: Development
+2022-10-18 17:33:42.239 +05:00 [INF] Content root path: C:\Users\Elbek\Desktop\blog-app\src\BlogApp.Api\
+2022-10-18 17:33:42.317 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44380/swagger/index.html - -
+2022-10-18 17:33:42.972 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44380/_framework/aspnetcore-browser-refresh.js - -
+2022-10-18 17:33:42.974 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44380/_vs/browserLink - -
+2022-10-18 17:33:42.983 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44380/swagger/index.html - - - 200 - text/html;charset=utf-8 672.5093ms
+2022-10-18 17:33:42.998 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44380/_framework/aspnetcore-browser-refresh.js - - - 200 11992 application/javascript;+charset=utf-8 25.6243ms
+2022-10-18 17:33:43.074 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44380/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 100.3005ms
+2022-10-18 17:33:43.145 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44380/swagger/v1/swagger.json - -
+2022-10-18 17:33:43.470 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44380/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 325.3003ms
+2022-10-18 17:34:09.881 +05:00 [INF] Request starting HTTP/2 POST https://localhost:44380/api/accounts/registr multipart/form-data;+boundary=----WebKitFormBoundaryWBirrpOY64iRPRaF 98727
+2022-10-18 17:34:09.925 +05:00 [INF] CORS policy execution successful.
+2022-10-18 17:34:10.160 +05:00 [INF] Executing endpoint 'BlogApp.Api.Controllers.AccountsController.RegistrAsync (BlogApp.Api)'
+2022-10-18 17:34:10.243 +05:00 [INF] Route matched with {action = "Registr", controller = "Accounts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RegistrAsync(BlogApp.Api.ViewModels.Users.UserCreateViewModel) on controller BlogApp.Api.Controllers.AccountsController (BlogApp.Api).
+2022-10-18 17:34:12.761 +05:00 [INF] Entity Framework Core 6.0.9 initialized 'AppDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.7+5b98e4b74de93b590b44aef8dd7967c03acc433c' with options: NoTracking 
+2022-10-18 17:34:16.584 +05:00 [INF] Executed DbCommand (441ms) [Parameters=[@__viewModel_Email_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."Email", u."FirstName", u."ImagePath", u."IsEmailConfirmed", u."LastName", u."PasswordHash", u."Salt", u."UserRole", u."Username"
+FROM "Users" AS u
+WHERE u."Email" = @__viewModel_Email_0
+LIMIT 1
+2022-10-18 17:34:16.897 +05:00 [INF] Executed DbCommand (215ms) [Parameters=[@__viewModel_Username_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."Email", u."FirstName", u."ImagePath", u."IsEmailConfirmed", u."LastName", u."PasswordHash", u."Salt", u."UserRole", u."Username"
+FROM "Users" AS u
+WHERE u."Username" = @__viewModel_Username_0
+LIMIT 1
+2022-10-18 17:34:18.112 +05:00 [INF] Executed DbCommand (273ms) [Parameters=[@p0='?', @p1='?', @p2='?', @p3='?' (DbType = Boolean), @p4='?', @p5='?', @p6='?', @p7='?' (DbType = Int32), @p8='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Users" ("Email", "FirstName", "ImagePath", "IsEmailConfirmed", "LastName", "PasswordHash", "Salt", "UserRole", "Username")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8)
+RETURNING "Id";
+2022-10-18 17:34:22.626 +05:00 [INF] Executing OkObjectResult, writing value of type 'System.Boolean'.
+2022-10-18 17:34:22.648 +05:00 [INF] Executed action BlogApp.Api.Controllers.AccountsController.RegistrAsync (BlogApp.Api) in 12394.5937ms
+2022-10-18 17:34:22.652 +05:00 [INF] Executed endpoint 'BlogApp.Api.Controllers.AccountsController.RegistrAsync (BlogApp.Api)'
+2022-10-18 17:34:22.689 +05:00 [INF] Request finished HTTP/2 POST https://localhost:44380/api/accounts/registr multipart/form-data;+boundary=----WebKitFormBoundaryWBirrpOY64iRPRaF 98727 - 200 - application/json;+charset=utf-8 12808.9475ms
+2022-10-18 17:34:33.989 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44380/api/users - -
+2022-10-18 17:34:33.993 +05:00 [INF] Executing endpoint 'BlogApp.Api.Controllers.UsersController.GetAllAsync (BlogApp.Api)'
+2022-10-18 17:34:34.001 +05:00 [INF] Route matched with {action = "GetAll", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllAsync(BlogApp.Api.Commons.Helpers.PaginationParams) on controller BlogApp.Api.Controllers.UsersController (BlogApp.Api).
+2022-10-18 17:34:34.080 +05:00 [INF] Entity Framework Core 6.0.9 initialized 'AppDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.7+5b98e4b74de93b590b44aef8dd7967c03acc433c' with options: NoTracking 
+2022-10-18 17:34:34.385 +05:00 [INF] Executed DbCommand (247ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)::INT
+FROM "Users" AS u
+2022-10-18 17:34:34.636 +05:00 [INF] Executed DbCommand (218ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."Email", u."FirstName", u."ImagePath", u."IsEmailConfirmed", u."LastName", u."PasswordHash", u."Salt", u."UserRole", u."Username"
+FROM "Users" AS u
+2022-10-18 17:34:34.655 +05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BlogApp.Api.ViewModels.Users.UserViewModel, BlogApp.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-10-18 17:34:34.663 +05:00 [INF] Executed action BlogApp.Api.Controllers.UsersController.GetAllAsync (BlogApp.Api) in 661.9779ms
+2022-10-18 17:34:34.663 +05:00 [INF] Executed endpoint 'BlogApp.Api.Controllers.UsersController.GetAllAsync (BlogApp.Api)'
+2022-10-18 17:34:34.664 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44380/api/users - - - 200 - application/json;+charset=utf-8 674.7562ms

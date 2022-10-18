@@ -11,6 +11,15 @@ namespace BlogApp.Api.Services
         public FileService(IWebHostEnvironment webHost)
         {
             _basePath = webHost.WebRootPath;
+            if (!Directory.Exists(_basePath))
+            {
+                Directory.CreateDirectory(_basePath);
+            }
+            string imagepath = Path.Combine(_basePath, _imageFolderName);
+            if (!Directory.Exists(imagepath))
+            {
+                Directory.CreateDirectory(imagepath);
+            }
         }
 
         public async Task<string> SaveImageAsync(IFormFile file)
