@@ -2515,3 +2515,41 @@ LIMIT 1
 2022-10-18 05:01:54.562 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44380/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 94.4813ms
 2022-10-18 05:01:54.711 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44380/swagger/v1/swagger.json - -
 2022-10-18 05:01:54.717 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44380/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 6.0543ms
+2022-10-18 06:50:38.254 +05:00 [INF] User profile is available. Using 'C:\Users\Elbek\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-10-18 06:50:38.675 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-10-18 06:50:38.675 +05:00 [INF] Hosting environment: Development
+2022-10-18 06:50:38.675 +05:00 [INF] Content root path: C:\Users\Elbek\Desktop\blog-app\src\BlogApp.Api\
+2022-10-18 06:50:38.740 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44380/swagger/index.html - -
+2022-10-18 06:50:39.403 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44380/_framework/aspnetcore-browser-refresh.js - -
+2022-10-18 06:50:39.403 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44380/_vs/browserLink - -
+2022-10-18 06:50:39.474 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44380/_framework/aspnetcore-browser-refresh.js - - - 200 11992 application/javascript;+charset=utf-8 67.7178ms
+2022-10-18 06:50:39.474 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44380/swagger/index.html - - - 200 - text/html;charset=utf-8 738.4854ms
+2022-10-18 06:50:39.538 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44380/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 135.5524ms
+2022-10-18 06:50:39.611 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44380/swagger/v1/swagger.json - -
+2022-10-18 06:50:39.782 +05:00 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Conflicting method/path combination "GET api/users" for actions - BlogApp.Api.Controllers.UsersController.GetAsync (BlogApp.Api),BlogApp.Api.Controllers.UsersController.GetAllAsync (BlogApp.Api). Actions require a unique method/path combination for Swagger/OpenAPI 3.0. Use ConflictingActionsResolver as a workaround
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwagger(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-10-18 06:50:39.926 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44380/swagger/v1/swagger.json - - - 500 - text/plain;+charset=utf-8 315.2101ms
+2022-10-18 06:50:56.417 +05:00 [INF] User profile is available. Using 'C:\Users\Elbek\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-10-18 06:50:56.723 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-10-18 06:50:56.723 +05:00 [INF] Hosting environment: Development
+2022-10-18 06:50:56.723 +05:00 [INF] Content root path: C:\Users\Elbek\Desktop\blog-app\src\BlogApp.Api\
+2022-10-18 06:50:56.765 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44380/swagger/index.html - -
+2022-10-18 06:50:57.395 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44380/_framework/aspnetcore-browser-refresh.js - -
+2022-10-18 06:50:57.396 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44380/_vs/browserLink - -
+2022-10-18 06:50:57.430 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44380/_framework/aspnetcore-browser-refresh.js - - - 200 11992 application/javascript;+charset=utf-8 25.7014ms
+2022-10-18 06:50:57.430 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44380/swagger/index.html - - - 200 - text/html;charset=utf-8 663.3491ms
+2022-10-18 06:50:57.511 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44380/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 114.4533ms
+2022-10-18 06:50:57.627 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44380/swagger/v1/swagger.json - -
+2022-10-18 06:50:57.823 +05:00 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Conflicting method/path combination "GET api/users" for actions - BlogApp.Api.Controllers.UsersController.GetAsync (BlogApp.Api),BlogApp.Api.Controllers.UsersController.GetAllAsync (BlogApp.Api). Actions require a unique method/path combination for Swagger/OpenAPI 3.0. Use ConflictingActionsResolver as a workaround
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwagger(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-10-18 06:50:57.893 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44380/swagger/v1/swagger.json - - - 500 - text/plain;+charset=utf-8 265.6640ms
