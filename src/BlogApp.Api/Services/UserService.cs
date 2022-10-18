@@ -14,13 +14,11 @@ namespace BlogApp.Api.Services
     {
         private readonly IUserRepositroy _userRepositroy;
         private readonly IFileService _fileService;
-        private readonly IBlogPostService _blogPostService;
 
         public UserService(IUserRepositroy userRepositroy, IFileService fileService, IBlogPostService blogPostService)
         {
             _userRepositroy = userRepositroy;
             _fileService = fileService;
-            _blogPostService = blogPostService;
         }
 
         public async Task<bool> DeleteAsync(Expression<Func<User, bool>> expression)
@@ -65,18 +63,15 @@ namespace BlogApp.Api.Services
             return viewUser;
         }
 
-        public async Task<UserViewModel> UpdateAsync(long id, UserCreateViewModel viewModel)
+        public async Task<UserViewModel> UpdateAsync(UserCreateViewModel viewModel)
         {
-            var user = await _userRepositroy.GetAsync(o => o.Id == id);
+            var user = await _userRepositroy.GetAsync(o => o.Id == HttpContextHelper.UserId);
 
             if (user is null)
                 throw new StatusCodeException(HttpStatusCode.NotFound, message: "User not found");
 
-            if (HttpContextHelper.UserId != id)
-                throw new StatusCodeException(HttpStatusCode.BadRequest, "must enter correct id");
-
             user = (User)viewModel;
-            user.Id = id;
+            user.Id = (long)HttpContextHelper.UserId;
             if (viewModel.Image is not null)
                 user.ImagePath = await _fileService.SaveImageAsync(viewModel.Image);
 

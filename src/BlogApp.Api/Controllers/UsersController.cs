@@ -27,19 +27,19 @@ namespace BlogApp.Api.Controllers
         }
 
         [HttpDelete("{id}"), Authorize]
-        public async Task<IActionResult> DeleteAsync(long id)
-            => Ok(await _userService.DeleteAsync(o => o.Id == id));
+        public async Task<IActionResult> DeleteAsync()
+            => Ok(await _userService.DeleteAsync(o => o.Id == HttpContextHelper.UserId));
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateAsync(long id, [FromForm] UserCreateViewModel userCreateView)
-            => Ok(await _userService.UpdateAsync(id, userCreateView));
+        public async Task<IActionResult> UpdateAsync([FromForm] UserCreateViewModel userCreateView)
+            => Ok(await _userService.UpdateAsync(userCreateView));
 
         [HttpGet]
         public async Task<IActionResult> GetAllAsync([FromQuery] PaginationParams @params)
             => Ok(await _userService.GetAllAsync(@params));
 
         [HttpGet("{id}/blogposts")]
-        public async Task<IActionResult> GetAllBlogPostsAsync(long id, [FromQuery] PaginationParams @params)
-            => Ok(await _blogPostService.GetAllAsync(@params, blog => blog.UserId == id));
+        public async Task<IActionResult> GetAllBlogPostsAsync([FromQuery] PaginationParams @params)
+            => Ok(await _blogPostService.GetAllAsync(@params, blog => blog.UserId == HttpContextHelper.UserId));
     }
 }
