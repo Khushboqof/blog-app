@@ -39,7 +39,7 @@ namespace BlogApp.Api.Controllers
             => Ok(await _userService.GetAllAsync(@params));
 
         [HttpGet("{id}/blogposts")]
-        public async Task<IActionResult> GetAllBlogPostsAsync([FromQuery] PaginationParams @params)
-            => Ok(await _blogPostService.GetAllAsync(@params, blog => blog.UserId == HttpContextHelper.UserId));
+        public async Task<IActionResult> GetAllBlogPostsAsync(long id, [FromQuery] PaginationParams @params)
+            => Ok(await _blogPostService.GetAllAsync(@params, blog => blog.UserId == id));
     }
 }

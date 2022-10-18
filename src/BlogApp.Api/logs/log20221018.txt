@@ -2684,3 +2684,34 @@ FROM "Users" AS u
 2022-10-18 07:24:09.450 +05:00 [INF] Executed action BlogApp.Api.Controllers.UsersController.GetAllAsync (BlogApp.Api) in 465.6ms
 2022-10-18 07:24:09.450 +05:00 [INF] Executed endpoint 'BlogApp.Api.Controllers.UsersController.GetAllAsync (BlogApp.Api)'
 2022-10-18 07:24:09.450 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44380/api/users - - - 200 - application/json;+charset=utf-8 478.0403ms
+2022-10-18 08:24:24.611 +05:00 [INF] User profile is available. Using 'C:\Users\Elbek\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-10-18 08:24:25.048 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-10-18 08:24:25.049 +05:00 [INF] Hosting environment: Development
+2022-10-18 08:24:25.049 +05:00 [INF] Content root path: C:\Users\Elbek\Desktop\blog-app\src\BlogApp.Api\
+2022-10-18 08:24:25.131 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44380/swagger/index.html - -
+2022-10-18 08:24:25.839 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44380/_framework/aspnetcore-browser-refresh.js - -
+2022-10-18 08:24:25.839 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44380/_vs/browserLink - -
+2022-10-18 08:24:25.877 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44380/_framework/aspnetcore-browser-refresh.js - - - 200 11992 application/javascript;+charset=utf-8 24.0034ms
+2022-10-18 08:24:25.877 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44380/swagger/index.html - - - 200 - text/html;charset=utf-8 741.4222ms
+2022-10-18 08:24:25.958 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44380/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 119.0636ms
+2022-10-18 08:24:26.025 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44380/swagger/v1/swagger.json - -
+2022-10-18 08:24:26.304 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44380/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 278.8368ms
+2022-10-18 08:24:34.111 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44380/api/users - -
+2022-10-18 08:24:34.363 +05:00 [INF] Executing endpoint 'BlogApp.Api.Controllers.UsersController.GetAllAsync (BlogApp.Api)'
+2022-10-18 08:24:34.483 +05:00 [INF] Route matched with {action = "GetAll", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllAsync(BlogApp.Api.Commons.Helpers.PaginationParams) on controller BlogApp.Api.Controllers.UsersController (BlogApp.Api).
+2022-10-18 08:24:36.978 +05:00 [INF] Entity Framework Core 6.0.9 initialized 'AppDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.7+5b98e4b74de93b590b44aef8dd7967c03acc433c' with options: NoTracking 
+2022-10-18 08:24:39.827 +05:00 [INF] Executed DbCommand (288ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)::INT
+FROM "Users" AS u
+2022-10-18 08:24:40.163 +05:00 [INF] Executed DbCommand (162ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."Email", u."FirstName", u."ImagePath", u."IsEmailConfirmed", u."LastName", u."PasswordHash", u."Salt", u."UserRole", u."Username"
+FROM "Users" AS u
+2022-10-18 08:24:40.199 +05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BlogApp.Api.ViewModels.Users.UserViewModel, BlogApp.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-10-18 08:24:40.222 +05:00 [INF] Executed action BlogApp.Api.Controllers.UsersController.GetAllAsync (BlogApp.Api) in 5727.9131ms
+2022-10-18 08:24:40.223 +05:00 [INF] Executed endpoint 'BlogApp.Api.Controllers.UsersController.GetAllAsync (BlogApp.Api)'
+2022-10-18 08:24:40.247 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44380/api/users - - - 200 - application/json;+charset=utf-8 6135.4561ms
+2022-10-18 08:24:55.523 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44380/images//IMG_8fc60997-d476-45ca-b41d-a2141e5ae53e.jpg - -
+2022-10-18 08:24:55.542 +05:00 [INF] The file /images//IMG_8fc60997-d476-45ca-b41d-a2141e5ae53e.jpg was not modified
+2022-10-18 08:24:55.544 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44380/images//IMG_8fc60997-d476-45ca-b41d-a2141e5ae53e.jpg - - - 304 - image/jpeg 21.7666ms
+2022-10-18 08:24:55.614 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44380/favicon.ico - -
+2022-10-18 08:24:55.619 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44380/favicon.ico - - - 404 - - 4.2900ms
