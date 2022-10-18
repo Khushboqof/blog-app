@@ -15,6 +15,7 @@ namespace BlogApp.Api.ViewModels.Blogs
         [Required(ErrorMessage = "Image is required")]
         [DataType(DataType.Upload)]
         [MaxFileSize(3)]
+        [System.ComponentModel.Bindable(true)]
         [AllowedFileExtensions(new string[] { ".jpg", ".png" })]
         public IFormFile Image { get; set; } = null!;
 
