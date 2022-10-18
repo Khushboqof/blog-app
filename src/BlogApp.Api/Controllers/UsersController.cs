@@ -19,10 +19,12 @@ namespace BlogApp.Api.Controllers
             _userService = userService;
             _blogPostService = blogPostService;
         }
-
-        [HttpGet("{id}"), Authorize]
+        
+        [HttpGet("id"), Authorize]
         public async Task<IActionResult> GetAsync()
-            => Ok(await _userService.GetAsync(user => user.Id == HttpContextHelper.UserId));
+        {
+            return Ok(await _userService.GetAsync(user => user.Id == HttpContextHelper.UserId));
+        }
 
         [HttpDelete("{id}"), Authorize]
         public async Task<IActionResult> DeleteAsync(long id)

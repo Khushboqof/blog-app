@@ -2590,3 +2590,97 @@ Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Conflicting method/
 2022-10-18 06:53:02.129 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44380/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 93.2118ms
 2022-10-18 06:53:02.220 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44380/swagger/v1/swagger.json - -
 2022-10-18 06:53:02.492 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44380/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 271.8481ms
+2022-10-18 06:56:38.983 +05:00 [INF] User profile is available. Using 'C:\Users\Elbek\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-10-18 06:56:39.237 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-10-18 06:56:39.237 +05:00 [INF] Hosting environment: Development
+2022-10-18 06:56:39.237 +05:00 [INF] Content root path: C:\Users\Elbek\Desktop\blog-app\src\BlogApp.Api\
+2022-10-18 06:56:39.286 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44380/swagger/index.html - -
+2022-10-18 06:56:39.866 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44380/_framework/aspnetcore-browser-refresh.js - -
+2022-10-18 06:56:39.869 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44380/_vs/browserLink - -
+2022-10-18 06:56:39.878 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44380/swagger/index.html - - - 200 - text/html;charset=utf-8 594.0518ms
+2022-10-18 06:56:39.892 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44380/_framework/aspnetcore-browser-refresh.js - - - 200 11992 application/javascript;+charset=utf-8 25.4246ms
+2022-10-18 06:56:39.992 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44380/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 123.0547ms
+2022-10-18 06:56:40.064 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44380/swagger/v1/swagger.json - -
+2022-10-18 06:56:40.347 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44380/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 283.1446ms
+2022-10-18 06:56:50.557 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44380/api/users/50 - -
+2022-10-18 06:56:50.819 +05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2022-10-18 06:56:50.834 +05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2022-10-18 06:56:50.838 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44380/api/users/50 - - - 401 - - 281.4985ms
+2022-10-18 07:01:19.092 +05:00 [INF] User profile is available. Using 'C:\Users\Elbek\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-10-18 07:01:19.351 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-10-18 07:01:19.351 +05:00 [INF] Hosting environment: Development
+2022-10-18 07:01:19.351 +05:00 [INF] Content root path: C:\Users\Elbek\Desktop\blog-app\src\BlogApp.Api\
+2022-10-18 07:01:19.404 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44380/swagger/index.html - -
+2022-10-18 07:01:19.946 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44380/_framework/aspnetcore-browser-refresh.js - -
+2022-10-18 07:01:19.946 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44380/_vs/browserLink - -
+2022-10-18 07:01:19.961 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44380/swagger/index.html - - - 200 - text/html;charset=utf-8 554.8437ms
+2022-10-18 07:01:19.963 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44380/_framework/aspnetcore-browser-refresh.js - - - 200 11992 application/javascript;+charset=utf-8 15.0997ms
+2022-10-18 07:01:20.058 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44380/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 111.3364ms
+2022-10-18 07:01:20.125 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44380/swagger/v1/swagger.json - -
+2022-10-18 07:01:20.379 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44380/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 253.8249ms
+2022-10-18 07:10:37.018 +05:00 [INF] User profile is available. Using 'C:\Users\Elbek\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-10-18 07:10:37.478 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-10-18 07:10:37.479 +05:00 [INF] Hosting environment: Development
+2022-10-18 07:10:37.479 +05:00 [INF] Content root path: C:\Users\Elbek\Desktop\blog-app\src\BlogApp.Api\
+2022-10-18 07:10:37.554 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44380/swagger/index.html - -
+2022-10-18 07:10:38.283 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44380/_vs/browserLink - -
+2022-10-18 07:10:38.283 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44380/_framework/aspnetcore-browser-refresh.js - -
+2022-10-18 07:10:38.287 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44380/swagger/index.html - - - 200 - text/html;charset=utf-8 739.6742ms
+2022-10-18 07:10:38.324 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44380/_framework/aspnetcore-browser-refresh.js - - - 200 11992 application/javascript;+charset=utf-8 33.6938ms
+2022-10-18 07:10:38.412 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44380/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 99.9760ms
+2022-10-18 07:10:38.472 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44380/swagger/v1/swagger.json - -
+2022-10-18 07:10:38.773 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44380/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 301.0515ms
+2022-10-18 07:23:06.106 +05:00 [INF] User profile is available. Using 'C:\Users\Elbek\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-10-18 07:23:06.421 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-10-18 07:23:06.422 +05:00 [INF] Hosting environment: Development
+2022-10-18 07:23:06.422 +05:00 [INF] Content root path: C:\Users\Elbek\Desktop\blog-app\src\BlogApp.Api\
+2022-10-18 07:23:06.476 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44380/swagger/index.html - -
+2022-10-18 07:23:07.146 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44380/_vs/browserLink - -
+2022-10-18 07:23:07.146 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44380/_framework/aspnetcore-browser-refresh.js - -
+2022-10-18 07:23:07.170 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44380/swagger/index.html - - - 200 - text/html;charset=utf-8 698.9667ms
+2022-10-18 07:23:07.202 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44380/_framework/aspnetcore-browser-refresh.js - - - 200 11992 application/javascript;+charset=utf-8 41.7934ms
+2022-10-18 07:23:07.279 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44380/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 132.4218ms
+2022-10-18 07:23:07.560 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44380/swagger/v1/swagger.json - -
+2022-10-18 07:23:07.896 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44380/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 335.9323ms
+2022-10-18 07:23:26.708 +05:00 [INF] Request starting HTTP/2 POST https://localhost:44380/api/accounts/login multipart/form-data;+boundary=----WebKitFormBoundaryFVKTIRl37SC8tUTU 265
+2022-10-18 07:23:26.738 +05:00 [INF] CORS policy execution successful.
+2022-10-18 07:23:26.998 +05:00 [INF] Executing endpoint 'BlogApp.Api.Controllers.AccountsController.LogInAsync (BlogApp.Api)'
+2022-10-18 07:23:27.091 +05:00 [INF] Route matched with {action = "LogIn", controller = "Accounts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LogInAsync(BlogApp.Api.ViewModels.Users.UserLoginViewModel) on controller BlogApp.Api.Controllers.AccountsController (BlogApp.Api).
+2022-10-18 07:23:29.946 +05:00 [INF] Entity Framework Core 6.0.9 initialized 'AppDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.7+5b98e4b74de93b590b44aef8dd7967c03acc433c' with options: NoTracking 
+2022-10-18 07:23:33.479 +05:00 [INF] Executed DbCommand (346ms) [Parameters=[@__viewModel_Email_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."Email", u."FirstName", u."ImagePath", u."IsEmailConfirmed", u."LastName", u."PasswordHash", u."Salt", u."UserRole", u."Username"
+FROM "Users" AS u
+WHERE u."Email" = @__viewModel_Email_0
+LIMIT 1
+2022-10-18 07:23:34.345 +05:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2022-10-18 07:23:34.369 +05:00 [INF] Executed action BlogApp.Api.Controllers.AccountsController.LogInAsync (BlogApp.Api) in 7268.4345ms
+2022-10-18 07:23:34.371 +05:00 [INF] Executed endpoint 'BlogApp.Api.Controllers.AccountsController.LogInAsync (BlogApp.Api)'
+2022-10-18 07:23:34.396 +05:00 [INF] Request finished HTTP/2 POST https://localhost:44380/api/accounts/login multipart/form-data;+boundary=----WebKitFormBoundaryFVKTIRl37SC8tUTU 265 - 200 - application/json;+charset=utf-8 7688.0587ms
+2022-10-18 07:23:59.397 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44380/api/users/id - -
+2022-10-18 07:23:59.660 +05:00 [INF] Executing endpoint 'BlogApp.Api.Controllers.UsersController.GetAsync (BlogApp.Api)'
+2022-10-18 07:23:59.666 +05:00 [INF] Route matched with {action = "Get", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAsync() on controller BlogApp.Api.Controllers.UsersController (BlogApp.Api).
+2022-10-18 07:23:59.737 +05:00 [INF] Entity Framework Core 6.0.9 initialized 'AppDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.7+5b98e4b74de93b590b44aef8dd7967c03acc433c' with options: NoTracking 
+2022-10-18 07:23:59.932 +05:00 [INF] Executed DbCommand (181ms) [Parameters=[@__UserId_0='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."Email", u."FirstName", u."ImagePath", u."IsEmailConfirmed", u."LastName", u."PasswordHash", u."Salt", u."UserRole", u."Username"
+FROM "Users" AS u
+WHERE u."Id" = @__UserId_0
+LIMIT 1
+2022-10-18 07:23:59.935 +05:00 [INF] Executing OkObjectResult, writing value of type 'BlogApp.Api.ViewModels.Users.UserViewModel'.
+2022-10-18 07:23:59.944 +05:00 [INF] Executed action BlogApp.Api.Controllers.UsersController.GetAsync (BlogApp.Api) in 277.5288ms
+2022-10-18 07:23:59.944 +05:00 [INF] Executed endpoint 'BlogApp.Api.Controllers.UsersController.GetAsync (BlogApp.Api)'
+2022-10-18 07:23:59.946 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44380/api/users/id - - - 200 - application/json;+charset=utf-8 548.9579ms
+2022-10-18 07:24:08.972 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44380/api/users - -
+2022-10-18 07:24:08.979 +05:00 [INF] Executing endpoint 'BlogApp.Api.Controllers.UsersController.GetAllAsync (BlogApp.Api)'
+2022-10-18 07:24:08.984 +05:00 [INF] Route matched with {action = "GetAll", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllAsync(BlogApp.Api.Commons.Helpers.PaginationParams) on controller BlogApp.Api.Controllers.UsersController (BlogApp.Api).
+2022-10-18 07:24:09.004 +05:00 [INF] Entity Framework Core 6.0.9 initialized 'AppDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.7+5b98e4b74de93b590b44aef8dd7967c03acc433c' with options: NoTracking 
+2022-10-18 07:24:09.250 +05:00 [INF] Executed DbCommand (178ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)::INT
+FROM "Users" AS u
+2022-10-18 07:24:09.447 +05:00 [INF] Executed DbCommand (172ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."Email", u."FirstName", u."ImagePath", u."IsEmailConfirmed", u."LastName", u."PasswordHash", u."Salt", u."UserRole", u."Username"
+FROM "Users" AS u
+2022-10-18 07:24:09.448 +05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BlogApp.Api.ViewModels.Users.UserViewModel, BlogApp.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-10-18 07:24:09.450 +05:00 [INF] Executed action BlogApp.Api.Controllers.UsersController.GetAllAsync (BlogApp.Api) in 465.6ms
+2022-10-18 07:24:09.450 +05:00 [INF] Executed endpoint 'BlogApp.Api.Controllers.UsersController.GetAllAsync (BlogApp.Api)'
+2022-10-18 07:24:09.450 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44380/api/users - - - 200 - application/json;+charset=utf-8 478.0403ms
