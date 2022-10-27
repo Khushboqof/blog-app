@@ -11,6 +11,10 @@ namespace BlogApp.UnitTest.Security
 {
     public class HasherTest
     {
-        
+        [Fact]
+        public void ReturnValidHash()
+        {
+            
+        }
     }
 }
