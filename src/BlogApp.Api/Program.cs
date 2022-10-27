@@ -43,10 +43,9 @@ builder.Services.AddScoped<IEmailService, EmailService>();
 builder.Services.AddCors(CorsOptions =>
 {
     CorsOptions.AddPolicy("AllowAll", corsAccesses =>
-    corsAccesses.AllowAnyOrigin().AllowAnyHeader().AllowAnyOrigin().AllowAnyHeader()
+    corsAccesses.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader()
     );
 });
-
 
 builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 

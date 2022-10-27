@@ -5,6 +5,10 @@ VisualStudioVersion = 17.3.32901.215
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlogApp.Api", "BlogApp.Api\BlogApp.Api.csproj", "{B2FE8FDB-DAD2-4C54-A66A-2CAA253A3A37}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{4DB8D10C-66F8-4009-BA3A-22E614406FFE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlogApp.UnitTest", "BlogApp.UnitTest\BlogApp.UnitTest.csproj", "{DE492F7D-07F4-42D1-A413-C7784A4727E2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,9 +19,16 @@ Global
 		{B2FE8FDB-DAD2-4C54-A66A-2CAA253A3A37}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B2FE8FDB-DAD2-4C54-A66A-2CAA253A3A37}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B2FE8FDB-DAD2-4C54-A66A-2CAA253A3A37}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE492F7D-07F4-42D1-A413-C7784A4727E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE492F7D-07F4-42D1-A413-C7784A4727E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE492F7D-07F4-42D1-A413-C7784A4727E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE492F7D-07F4-42D1-A413-C7784A4727E2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DE492F7D-07F4-42D1-A413-C7784A4727E2} = {4DB8D10C-66F8-4009-BA3A-22E614406FFE}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {94A747C6-66C1-449E-ADD1-68C72045A039}
