@@ -20,5 +20,11 @@ namespace BlogApp.UnitTest.Security
 
             Assert.True(isCompleted);
         }
+
+        [Fact]
+        public void EmailValid()
+        {
+
+        }
     }
 }
