@@ -22,6 +22,9 @@ namespace BlogApp.Api.Services
             }
         }
 
+        ///<summary>
+        ///this method th file save
+        ///<summary>
         public async Task<string> SaveImageAsync(IFormFile file)
         {
             string fileName = ImageHelper.MakeImageName(file.FileName);
