@@ -241,3 +241,27 @@ LIMIT 1
 2022-10-28 22:43:16.693 +05:00 [INF] Executed action BlogApp.Api.Controllers.UsersController.GetAllBlogPostsAsync (BlogApp.Api) in 822.0589ms
 2022-10-28 22:43:16.693 +05:00 [INF] Executed endpoint 'BlogApp.Api.Controllers.UsersController.GetAllBlogPostsAsync (BlogApp.Api)'
 2022-10-28 22:43:16.693 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44380/api/users/64/blogposts - - - 200 - application/json;+charset=utf-8 829.2515ms
+2022-10-28 22:56:00.318 +05:00 [INF] User profile is available. Using 'C:\Users\Elbek\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-10-28 22:56:00.571 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-10-28 22:56:00.571 +05:00 [INF] Hosting environment: Development
+2022-10-28 22:56:00.571 +05:00 [INF] Content root path: C:\Users\Elbek\Desktop\blog-app\src\BlogApp.Api\
+2022-10-28 22:56:00.637 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44380/swagger/index.html - -
+2022-10-28 22:56:00.637 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44380/_vs/browserLink - -
+2022-10-28 22:56:00.637 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44380/_framework/aspnetcore-browser-refresh.js - -
+2022-10-28 22:56:00.711 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44380/_framework/aspnetcore-browser-refresh.js - - - 200 11992 application/javascript;+charset=utf-8 75.9462ms
+2022-10-28 22:56:00.818 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44380/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 184.0700ms
+2022-10-28 22:56:00.879 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44380/swagger/v1/swagger.json - -
+2022-10-28 22:56:00.923 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44380/swagger/index.html - - - 200 - text/html;charset=utf-8 289.5803ms
+2022-10-28 22:56:00.926 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44380/_framework/aspnetcore-browser-refresh.js - -
+2022-10-28 22:56:00.927 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44380/_framework/aspnetcore-browser-refresh.js - - - 200 11992 application/javascript;+charset=utf-8 1.3413ms
+2022-10-28 22:56:00.934 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44380/_vs/browserLink - -
+2022-10-28 22:56:00.970 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44380/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 36.0198ms
+2022-10-28 22:56:01.047 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44380/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 167.9071ms
+2022-10-28 22:56:01.056 +05:00 [INF] Request starting HTTP/2 GET https://localhost:44380/swagger/v1/swagger.json - -
+2022-10-28 22:56:01.060 +05:00 [INF] Request finished HTTP/2 GET https://localhost:44380/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 4.1895ms
+2022-10-28 23:02:13.008 +05:00 [INF] Request starting HTTP/2 POST https://localhost:44380/api/blogposts multipart/form-data;+boundary=----WebKitFormBoundaryLjKIWAU26hxh2meS 64661
+2022-10-28 23:02:13.025 +05:00 [INF] CORS policy execution successful.
+2022-10-28 23:02:13.172 +05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2022-10-28 23:02:13.179 +05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2022-10-28 23:02:13.183 +05:00 [INF] Request finished HTTP/2 POST https://localhost:44380/api/blogposts multipart/form-data;+boundary=----WebKitFormBoundaryLjKIWAU26hxh2meS 64661 - 401 - - 175.9667ms
