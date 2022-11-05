@@ -1,4 +1,4 @@
-﻿    using BlogApp.Api.Commons.Exceptions;
+﻿using BlogApp.Api.Commons.Exceptions;
 using Newtonsoft.Json;
 using Serilog;
 

@@ -1,10 +1,4 @@
 ﻿using BlogApp.Api.Commons.Security;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.AccessControl;
-using System.Text;
-using System.Threading.Tasks;
 using Xunit;
 
 namespace BlogApp.UnitTest.Security
@@ -19,12 +13,6 @@ namespace BlogApp.UnitTest.Security
             var isCompleted = PasswordHasher.Verify(password, "47f1eb8f-6450-4da9-9bde-6859056d0a35", oldHash);
 
             Assert.True(isCompleted);
-        }
-
-        [Fact]
-        public void EmailValid()
-        {
-
         }
     }
 }
