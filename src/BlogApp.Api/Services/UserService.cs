@@ -53,7 +53,7 @@ namespace BlogApp.Api.Services
             var user = await _userRepositroy.GetAsync(expression);
 
             if (user is null)
-                throw new StatusCodeException(HttpStatusCode.NotFound, message: "User not found");  
+                throw new StatusCodeException(HttpStatusCode.NotFound, message: "User not found");
 
             var viewUser = (UserViewModel)user;
 

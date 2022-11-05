@@ -42,7 +42,7 @@ namespace BlogApp.Api.Services
         {
             string absoluteFilePath = Path.Combine(_basePath, relativeImagePath);
 
-            if(!File.Exists(absoluteFilePath)) return Task.FromResult(false);
+            if (!File.Exists(absoluteFilePath)) return Task.FromResult(false);
 
             try
             {
@@ -51,7 +51,7 @@ namespace BlogApp.Api.Services
             }
             catch
             {
-                return Task.FromResult(false);  
+                return Task.FromResult(false);
             }
         }
     }

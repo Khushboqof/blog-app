@@ -53,7 +53,7 @@ namespace BlogApp.Api.Services
 
             if (HttpContextHelper.UserId != user.Id)
                 throw new StatusCodeException(HttpStatusCode.BadRequest, message: "must enter correct id");
-            
+
             await _blogAppRepository.DeleteAsync(expression);
             await _blogAppRepository.SaveAsync();
 

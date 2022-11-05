@@ -25,5 +25,6 @@ namespace BlogApp.Api.Entities
         public UserRole UserRole { get; set; } = UserRole.User;
 
         public virtual ICollection<BlogPost> BlogPosts { get; set; }
+        public string PhoneNumber { get; internal set; }
     }
 }
