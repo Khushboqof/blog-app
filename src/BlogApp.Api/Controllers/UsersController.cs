@@ -1,4 +1,5 @@
 ﻿using BlogApp.Api.Commons.Helpers;
+using BlogApp.Api.Entities;
 using BlogApp.Api.Inerfaces.Services;
 using BlogApp.Api.ViewModels.Users;
 using Microsoft.AspNetCore.Authorization;
@@ -18,7 +19,7 @@ namespace BlogApp.Api.Controllers
             _userService = userService;
             _blogPostService = blogPostService;
         }
-
+        
         [HttpGet("id"), Authorize]
         public async Task<IActionResult> GetAsync()
         {
